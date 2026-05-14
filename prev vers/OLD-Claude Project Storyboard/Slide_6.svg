@@ -1,0 +1,119 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="'Kalam', 'Comic Sans MS', cursive">
+  <rect width="1600" height="900" fill="#fdfcf7"/>
+
+  <!-- Title -->
+  <text x="800" y="80" font-size="52" font-weight="bold" text-anchor="middle" fill="#1a1a1a">How It Works (Conceptually)</text>
+  <line x1="500" y1="100" x2="1100" y2="100" stroke="#f4c430" stroke-width="8" stroke-linecap="round"/>
+  <text x="800" y="148" font-size="22" text-anchor="middle" fill="#555" font-style="italic">Four stages turn raw municipal files into source-backed answers</text>
+
+  <!-- Stage 1: Ingest -->
+  <g transform="translate(80, 280)">
+    <rect x="0" y="60" width="240" height="240" rx="14" fill="#fff" stroke="#333" stroke-width="3"/>
+    <rect x="0" y="60" width="240" height="44" rx="14" fill="#cde7f0" stroke="#333" stroke-width="3"/>
+    <text x="120" y="92" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a4a72">1. Ingest</text>
+
+    <!-- Document icons -->
+    <rect x="40" y="130" width="50" height="65" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="65" y="170" text-anchor="middle" font-size="11" fill="#666">PDF</text>
+    <rect x="100" y="130" width="50" height="65" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="125" y="170" text-anchor="middle" font-size="11" fill="#666">DOCX</text>
+    <rect x="160" y="130" width="50" height="65" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="185" y="170" text-anchor="middle" font-size="11" fill="#666">XLSX</text>
+
+    <text x="120" y="230" text-anchor="middle" font-size="16" fill="#333">Collect agendas,</text>
+    <text x="120" y="252" text-anchor="middle" font-size="16" fill="#333">minutes, budgets,</text>
+    <text x="120" y="274" text-anchor="middle" font-size="16" fill="#333">reports, attachments</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 330 400 L 410 400" stroke="#333" stroke-width="4" fill="none" marker-end="url(#arr6)"/>
+
+  <!-- Stage 2: Structure -->
+  <g transform="translate(420, 280)">
+    <rect x="0" y="60" width="240" height="240" rx="14" fill="#fff" stroke="#333" stroke-width="3"/>
+    <rect x="0" y="60" width="240" height="44" rx="14" fill="#fff9e0" stroke="#333" stroke-width="3"/>
+    <text x="120" y="92" text-anchor="middle" font-size="22" font-weight="bold" fill="#b8860b">2. Structure</text>
+
+    <!-- Chunking visual -->
+    <rect x="40" y="130" width="160" height="22" fill="#fdeaea" stroke="#333" stroke-width="2"/>
+    <rect x="40" y="158" width="160" height="22" fill="#d4f1d4" stroke="#333" stroke-width="2"/>
+    <rect x="40" y="186" width="160" height="22" fill="#cde7f0" stroke="#333" stroke-width="2"/>
+    <rect x="40" y="214" width="160" height="22" fill="#fff9e0" stroke="#333" stroke-width="2"/>
+
+    <text x="120" y="270" text-anchor="middle" font-size="16" fill="#333">Chunk, tag, link</text>
+    <text x="120" y="290" text-anchor="middle" font-size="16" fill="#333">to topics &amp; dates</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 670 400 L 750 400" stroke="#333" stroke-width="4" fill="none" marker-end="url(#arr6)"/>
+
+  <!-- Stage 3: Embed / Index -->
+  <g transform="translate(760, 280)">
+    <rect x="0" y="60" width="240" height="240" rx="14" fill="#fff" stroke="#333" stroke-width="3"/>
+    <rect x="0" y="60" width="240" height="44" rx="14" fill="#d4f1d4" stroke="#333" stroke-width="3"/>
+    <text x="120" y="92" text-anchor="middle" font-size="22" font-weight="bold" fill="#2a8c4a">3. Embed</text>
+
+    <!-- Vector space dots -->
+    <circle cx="80" cy="160" r="8" fill="#1a4a72"/>
+    <circle cx="120" cy="145" r="8" fill="#e67e22"/>
+    <circle cx="155" cy="170" r="8" fill="#2a8c4a"/>
+    <circle cx="100" cy="195" r="8" fill="#c0392b"/>
+    <circle cx="170" cy="200" r="8" fill="#1a4a72"/>
+    <circle cx="135" cy="220" r="8" fill="#f4c430"/>
+    <line x1="80" y1="160" x2="120" y2="145" stroke="#999" stroke-width="1"/>
+    <line x1="120" y1="145" x2="155" y2="170" stroke="#999" stroke-width="1"/>
+    <line x1="100" y1="195" x2="135" y2="220" stroke="#999" stroke-width="1"/>
+    <line x1="155" y1="170" x2="170" y2="200" stroke="#999" stroke-width="1"/>
+
+    <text x="120" y="265" text-anchor="middle" font-size="16" fill="#333">Map meaning into</text>
+    <text x="120" y="285" text-anchor="middle" font-size="16" fill="#333">a searchable index</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 1010 400 L 1090 400" stroke="#333" stroke-width="4" fill="none" marker-end="url(#arr6)"/>
+
+  <!-- Stage 4: Retrieve & answer -->
+  <g transform="translate(1100, 280)">
+    <rect x="0" y="60" width="240" height="240" rx="14" fill="#fff" stroke="#333" stroke-width="3"/>
+    <rect x="0" y="60" width="240" height="44" rx="14" fill="#ffe0d6" stroke="#333" stroke-width="3"/>
+    <text x="120" y="92" text-anchor="middle" font-size="20" font-weight="bold" fill="#c0392b">4. Retrieve + Cite</text>
+
+    <!-- Chatbot icon -->
+    <rect x="80" y="125" width="80" height="70" rx="14" fill="#fff" stroke="#333" stroke-width="3"/>
+    <circle cx="100" cy="155" r="6" fill="#1a4a72"/>
+    <circle cx="140" cy="155" r="6" fill="#1a4a72"/>
+    <path d="M 100 175 Q 120 185 140 175" stroke="#333" stroke-width="2" fill="none"/>
+    <line x1="80" y1="140" x2="68" y2="125" stroke="#333" stroke-width="3"/>
+    <line x1="160" y1="140" x2="172" y2="125" stroke="#333" stroke-width="3"/>
+
+    <text x="120" y="225" text-anchor="middle" font-size="16" fill="#333">Plain-English answer</text>
+    <text x="120" y="247" text-anchor="middle" font-size="16" fill="#333">+ citations to source</text>
+    <text x="120" y="269" text-anchor="middle" font-size="16" fill="#333">document &amp; page</text>
+  </g>
+
+  <!-- Big curly under bracket -->
+  <path d="M 90 640 Q 90 670 130 670 L 760 670 Q 800 670 800 700 Q 800 670 840 670 L 1310 670 Q 1340 670 1340 640"
+        stroke="#1a4a72" stroke-width="3" fill="none"/>
+
+  <!-- Person below -->
+  <g transform="translate(740, 720)">
+    <circle cx="60" cy="40" r="32" fill="none" stroke="#333" stroke-width="3"/>
+    <circle cx="48" cy="35" r="3" fill="#333"/>
+    <circle cx="72" cy="35" r="3" fill="#333"/>
+    <path d="M 48 52 Q 60 60 72 52" stroke="#333" stroke-width="2" fill="none"/>
+    <line x1="60" y1="72" x2="60" y2="130" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="90" x2="35" y2="115" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="90" x2="85" y2="115" stroke="#333" stroke-width="3"/>
+    <rect x="-30" y="145" width="180" height="35" rx="6" fill="#fff9e0" stroke="#f4c430" stroke-width="3"/>
+    <text x="60" y="168" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Citizen / Council</text>
+  </g>
+
+  <!-- Question to system -->
+  <text x="800" y="650" text-anchor="middle" font-size="20" fill="#1a4a72" font-style="italic">Each stage requires deliberate technical choices — that's why we need feasibility funding</text>
+
+  <defs>
+    <marker id="arr6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

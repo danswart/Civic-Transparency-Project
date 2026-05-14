@@ -1,0 +1,95 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="'Kalam', 'Comic Sans MS', cursive">
+  <rect width="1600" height="900" fill="#fdfcf7"/>
+
+  <!-- Title -->
+  <text x="800" y="80" font-size="52" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Open Technical Questions</text>
+  <line x1="500" y1="100" x2="1100" y2="100" stroke="#f4c430" stroke-width="8" stroke-linecap="round"/>
+  <text x="800" y="148" font-size="22" text-anchor="middle" fill="#555" font-style="italic">These are the decisions first-round funding will let us answer responsibly</text>
+
+  <!-- Central head with thought cloud -->
+  <g transform="translate(680, 360)">
+    <circle cx="120" cy="80" r="48" fill="none" stroke="#333" stroke-width="3"/>
+    <circle cx="105" cy="75" r="4" fill="#333"/>
+    <circle cx="135" cy="75" r="4" fill="#333"/>
+    <path d="M 105 95 Q 120 105 135 95" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- Thought bubbles rising -->
+    <circle cx="85" cy="40" r="6" fill="#fff" stroke="#333" stroke-width="2"/>
+    <circle cx="70" cy="25" r="9" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="120" y="170" text-anchor="middle" font-size="18" fill="#555" font-style="italic">"What do we need to figure out?"</text>
+  </g>
+
+  <!-- 6 question cards arranged around -->
+
+  <!-- Q1: top-left -->
+  <g transform="translate(60, 220)">
+    <rect x="0" y="0" width="340" height="110" rx="14" fill="#fff" stroke="#1a4a72" stroke-width="3"/>
+    <circle cx="35" cy="35" r="20" fill="#cde7f0" stroke="#1a4a72" stroke-width="2"/>
+    <text x="35" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a4a72">?</text>
+    <text x="70" y="42" font-size="18" font-weight="bold" fill="#1a4a72">Document processing</text>
+    <text x="20" y="75" font-size="15" fill="#333">How do we reliably extract text,</text>
+    <text x="20" y="95" font-size="15" fill="#333">tables, and structure from PDFs?</text>
+  </g>
+
+  <!-- Q2: top-right -->
+  <g transform="translate(1200, 220)">
+    <rect x="0" y="0" width="340" height="110" rx="14" fill="#fff" stroke="#1a4a72" stroke-width="3"/>
+    <circle cx="35" cy="35" r="20" fill="#cde7f0" stroke="#1a4a72" stroke-width="2"/>
+    <text x="35" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a4a72">?</text>
+    <text x="70" y="42" font-size="18" font-weight="bold" fill="#1a4a72">Chunking strategy</text>
+    <text x="20" y="75" font-size="15" fill="#333">How do we split documents to</text>
+    <text x="20" y="95" font-size="15" fill="#333">preserve context across sections?</text>
+  </g>
+
+  <!-- Q3: middle-left -->
+  <g transform="translate(60, 400)">
+    <rect x="0" y="0" width="340" height="110" rx="14" fill="#fff" stroke="#2a8c4a" stroke-width="3"/>
+    <circle cx="35" cy="35" r="20" fill="#d4f1d4" stroke="#2a8c4a" stroke-width="2"/>
+    <text x="35" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#2a8c4a">?</text>
+    <text x="70" y="42" font-size="18" font-weight="bold" fill="#2a8c4a">Model selection</text>
+    <text x="20" y="75" font-size="15" fill="#333">Open or hosted? What balances</text>
+    <text x="20" y="95" font-size="15" fill="#333">accuracy, cost, and data control?</text>
+  </g>
+
+  <!-- Q4: middle-right -->
+  <g transform="translate(1200, 400)">
+    <rect x="0" y="0" width="340" height="110" rx="14" fill="#fff" stroke="#2a8c4a" stroke-width="3"/>
+    <circle cx="35" cy="35" r="20" fill="#d4f1d4" stroke="#2a8c4a" stroke-width="2"/>
+    <text x="35" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#2a8c4a">?</text>
+    <text x="70" y="42" font-size="18" font-weight="bold" fill="#2a8c4a">Citation accuracy</text>
+    <text x="20" y="75" font-size="15" fill="#333">How do we guarantee answers</text>
+    <text x="20" y="95" font-size="15" fill="#333">point to verifiable sources?</text>
+  </g>
+
+  <!-- Q5: bottom-left -->
+  <g transform="translate(60, 580)">
+    <rect x="0" y="0" width="340" height="110" rx="14" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+    <circle cx="35" cy="35" r="20" fill="#fdeaea" stroke="#c0392b" stroke-width="2"/>
+    <text x="35" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#c0392b">?</text>
+    <text x="70" y="42" font-size="18" font-weight="bold" fill="#c0392b">Scale &amp; cost</text>
+    <text x="20" y="75" font-size="15" fill="#333">What does it cost to host,</text>
+    <text x="20" y="95" font-size="15" fill="#333">maintain, and serve at city scale?</text>
+  </g>
+
+  <!-- Q6: bottom-right -->
+  <g transform="translate(1200, 580)">
+    <rect x="0" y="0" width="340" height="110" rx="14" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+    <circle cx="35" cy="35" r="20" fill="#fdeaea" stroke="#c0392b" stroke-width="2"/>
+    <text x="35" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#c0392b">?</text>
+    <text x="70" y="42" font-size="18" font-weight="bold" fill="#c0392b">Governance</text>
+    <text x="20" y="75" font-size="15" fill="#333">How do we handle privacy,</text>
+    <text x="20" y="95" font-size="15" fill="#333">audit logs, and public trust?</text>
+  </g>
+
+  <!-- Connector lines from center -->
+  <path d="M 720 290 Q 600 280 410 275" stroke="#999" stroke-width="2" fill="none" stroke-dasharray="5,4"/>
+  <path d="M 920 290 Q 1050 280 1200 275" stroke="#999" stroke-width="2" fill="none" stroke-dasharray="5,4"/>
+  <path d="M 700 440 L 410 455" stroke="#999" stroke-width="2" fill="none" stroke-dasharray="5,4"/>
+  <path d="M 940 440 L 1200 455" stroke="#999" stroke-width="2" fill="none" stroke-dasharray="5,4"/>
+  <path d="M 720 510 Q 600 580 410 635" stroke="#999" stroke-width="2" fill="none" stroke-dasharray="5,4"/>
+  <path d="M 920 510 Q 1050 580 1200 635" stroke="#999" stroke-width="2" fill="none" stroke-dasharray="5,4"/>
+
+  <!-- Bottom note -->
+  <rect x="300" y="780" width="1000" height="80" rx="10" fill="#fff9e0" stroke="#f4c430" stroke-width="4"/>
+  <text x="800" y="815" text-anchor="middle" font-size="22" fill="#333">Each question has a real answer — but only with the right experts at the table.</text>
+  <text x="800" y="845" text-anchor="middle" font-size="20" font-style="italic" fill="#1a4a72">That is what feasibility funding is for.</text>
+</svg>

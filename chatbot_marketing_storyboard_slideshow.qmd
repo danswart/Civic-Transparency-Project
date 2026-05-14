@@ -1,0 +1,141 @@
+---
+title: "Civic Transparency Project"
+subtitle: "Project Storyboard"
+authors:
+    - "Dan Swart"
+    - "Holly Richard"
+format:
+  revealjs:
+    embed-resources: true
+    slide-number: false
+    controls: true
+    progress: true
+    transition: none
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+
+
+```{r}
+#| label: slide-1
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("marketing_storyboard_slides/Slide 1.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-2
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("marketing_storyboard_slides/Slide 2.png")
+
+```
+
+---
+
+
+```{r}
+#| label: slide-3
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("marketing_storyboard_slides/Slide 3.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-4
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("marketing_storyboard_slides/Slide 4.png")
+
+```
+
+---
+
+
+```{r}
+#| label: slide-5
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("marketing_storyboard_slides/Slide 5.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-6
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("marketing_storyboard_slides/Slide 6.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-7
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("marketing_storyboard_slides/Slide 7.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-8
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("marketing_storyboard_slides/Slide 8.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-9
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("marketing_storyboard_slides/Slide 9.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-10
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("marketing_storyboard_slides/Slide 10.png")
+
+```
+

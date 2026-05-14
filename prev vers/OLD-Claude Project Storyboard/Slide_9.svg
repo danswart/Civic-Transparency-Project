@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="'Kalam', 'Comic Sans MS', cursive">
+  <rect width="1600" height="900" fill="#fdfcf7"/>
+
+  <!-- Title -->
+  <text x="800" y="80" font-size="52" font-weight="bold" text-anchor="middle" fill="#1a1a1a">What First-Round Funding Buys</text>
+  <line x1="450" y1="100" x2="1150" y2="100" stroke="#f4c430" stroke-width="8" stroke-linecap="round"/>
+  <text x="800" y="148" font-size="22" text-anchor="middle" fill="#555" font-style="italic">Four concrete deliverables — not a finished product, but the foundation to build one</text>
+
+  <!-- Coin / money icon center-top -->
+  <g transform="translate(740, 200)">
+    <circle cx="60" cy="60" r="50" fill="#f4c430" stroke="#b8860b" stroke-width="4"/>
+    <text x="60" y="78" text-anchor="middle" font-size="50" font-weight="bold" fill="#b8860b">$</text>
+    <text x="60" y="140" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Round 1</text>
+  </g>
+
+  <!-- 4 deliverable cards radiating out -->
+
+  <!-- Deliverable 1: top-left -->
+  <g transform="translate(120, 380)">
+    <rect x="0" y="0" width="340" height="200" rx="16" fill="#fff" stroke="#1a4a72" stroke-width="4"/>
+    <circle cx="40" cy="40" r="24" fill="#1a4a72"/>
+    <text x="40" y="48" text-anchor="middle" font-size="22" font-weight="bold" fill="#fff">1</text>
+    <text x="80" y="50" font-size="22" font-weight="bold" fill="#1a4a72">Hire the experts</text>
+    <line x1="20" y1="80" x2="320" y2="80" stroke="#cde7f0" stroke-width="2"/>
+    <text x="20" y="110" font-size="16" fill="#333">Purchase or contract the</text>
+    <text x="20" y="132" font-size="16" fill="#333">specialist expertise needed</text>
+    <text x="20" y="154" font-size="16" fill="#333">to design a scalable system</text>
+    <text x="20" y="176" font-size="16" fill="#333">architecture.</text>
+  </g>
+
+  <!-- Deliverable 2: top-right -->
+  <g transform="translate(1140, 380)">
+    <rect x="0" y="0" width="340" height="200" rx="16" fill="#fff" stroke="#2a8c4a" stroke-width="4"/>
+    <circle cx="40" cy="40" r="24" fill="#2a8c4a"/>
+    <text x="40" y="48" text-anchor="middle" font-size="22" font-weight="bold" fill="#fff">2</text>
+    <text x="80" y="50" font-size="22" font-weight="bold" fill="#2a8c4a">Test feasibility</text>
+    <line x1="20" y1="80" x2="320" y2="80" stroke="#d4f1d4" stroke-width="2"/>
+    <text x="20" y="110" font-size="16" fill="#333">Evaluate whether an</text>
+    <text x="20" y="132" font-size="16" fill="#333">enterprise-grade municipal</text>
+    <text x="20" y="154" font-size="16" fill="#333">transparency platform is</text>
+    <text x="20" y="176" font-size="16" fill="#333">technically achievable.</text>
+  </g>
+
+  <!-- Deliverable 3: bottom-left -->
+  <g transform="translate(120, 620)">
+    <rect x="0" y="0" width="340" height="200" rx="16" fill="#fff" stroke="#b8860b" stroke-width="4"/>
+    <circle cx="40" cy="40" r="24" fill="#b8860b"/>
+    <text x="40" y="48" text-anchor="middle" font-size="22" font-weight="bold" fill="#fff">3</text>
+    <text x="80" y="50" font-size="22" font-weight="bold" fill="#b8860b">Build the budget</text>
+    <line x1="20" y1="80" x2="320" y2="80" stroke="#fff0c2" stroke-width="2"/>
+    <text x="20" y="110" font-size="16" fill="#333">Develop a realistic,</text>
+    <text x="20" y="132" font-size="16" fill="#333">defensible feasibility</text>
+    <text x="20" y="154" font-size="16" fill="#333">budget grounded in</text>
+    <text x="20" y="176" font-size="16" fill="#333">actual technical scope.</text>
+  </g>
+
+  <!-- Deliverable 4: bottom-right -->
+  <g transform="translate(1140, 620)">
+    <rect x="0" y="0" width="340" height="200" rx="16" fill="#fff" stroke="#c0392b" stroke-width="4"/>
+    <circle cx="40" cy="40" r="24" fill="#c0392b"/>
+    <text x="40" y="48" text-anchor="middle" font-size="22" font-weight="bold" fill="#fff">4</text>
+    <text x="80" y="50" font-size="22" font-weight="bold" fill="#c0392b">Define the roadmap</text>
+    <line x1="20" y1="80" x2="320" y2="80" stroke="#fdeaea" stroke-width="2"/>
+    <text x="20" y="110" font-size="16" fill="#333">Determine the technical,</text>
+    <text x="20" y="132" font-size="16" fill="#333">operational, and financial</text>
+    <text x="20" y="154" font-size="16" fill="#333">requirements to move</text>
+    <text x="20" y="176" font-size="16" fill="#333">beyond the prototype stage.</text>
+  </g>
+
+  <!-- Connecting lines from coin to each card -->
+  <path d="M 740 290 Q 600 320 460 420" stroke="#999" stroke-width="3" fill="none" stroke-dasharray="6,5"/>
+  <path d="M 860 290 Q 1000 320 1140 420" stroke="#999" stroke-width="3" fill="none" stroke-dasharray="6,5"/>
+  <path d="M 740 340 Q 580 480 460 660" stroke="#999" stroke-width="3" fill="none" stroke-dasharray="6,5"/>
+  <path d="M 860 340 Q 1020 480 1140 660" stroke="#999" stroke-width="3" fill="none" stroke-dasharray="6,5"/>
+
+  <!-- Center summary card -->
+  <g transform="translate(580, 530)">
+    <rect x="0" y="0" width="440" height="80" rx="14" fill="#fff9e0" stroke="#f4c430" stroke-width="3"/>
+    <text x="220" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a4a72">Output: A validated, fundable plan</text>
+    <text x="220" y="62" text-anchor="middle" font-size="16" fill="#555" font-style="italic">for a second-round pilot deployment</text>
+  </g>
+</svg>

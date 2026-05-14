@@ -1,0 +1,54 @@
+/* Custom styling for the Municipal Transparency investor deck */
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Caveat:wght@400;700&display=swap');
+
+.reveal {
+  font-family: 'Kalam', 'Comic Sans MS', cursive;
+  background: #fdfcf7;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: 'Caveat', 'Kalam', cursive;
+  color: #1a4a72;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.reveal h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.3em;
+  border-bottom: 4px solid #f4c430;
+  padding-bottom: 0.2em;
+  display: inline-block;
+}
+
+.reveal .slides {
+  text-align: center;
+}
+
+.reveal .slides section img {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  margin: 0 auto;
+}
+
+.reveal .progress {
+  color: #f4c430;
+}
+
+.reveal .controls {
+  color: #1a4a72;
+}
+
+.reveal .slide-number {
+  background-color: rgba(244, 196, 48, 0.7);
+  color: #1a1a1a;
+  font-family: 'Kalam', cursive;
+}
+
+/* Reduce default padding so SVGs use the full slide */
+.reveal .slides > section {
+  padding: 0;
+}

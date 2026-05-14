@@ -1,0 +1,114 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="'Kalam', 'Comic Sans MS', cursive">
+  <rect width="1600" height="900" fill="#fdfcf7"/>
+
+  <!-- Title -->
+  <text x="800" y="80" font-size="52" font-weight="bold" text-anchor="middle" fill="#1a1a1a">A Widespread Public-Sector Need</text>
+  <line x1="450" y1="100" x2="1150" y2="100" stroke="#f4c430" stroke-width="8" stroke-linecap="round"/>
+  <text x="800" y="148" font-size="22" text-anchor="middle" fill="#555" font-style="italic">The transparency gap is not one city's problem — it's every jurisdiction's problem</text>
+
+  <!-- Multiple government buildings -->
+  <g transform="translate(120, 230)">
+    <text x="640" y="0" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a4a72">Thousands of jurisdictions, same problem</text>
+
+    <!-- City -->
+    <g transform="translate(20, 40)">
+      <rect x="20" y="60" width="100" height="160" fill="none" stroke="#333" stroke-width="3"/>
+      <polygon points="70,20 20,60 120,60" fill="none" stroke="#333" stroke-width="3"/>
+      <rect x="35" y="80" width="18" height="20" fill="#cde7f0"/>
+      <rect x="60" y="80" width="18" height="20" fill="#cde7f0"/>
+      <rect x="85" y="80" width="18" height="20" fill="#cde7f0"/>
+      <rect x="35" y="115" width="18" height="20" fill="#cde7f0"/>
+      <rect x="60" y="115" width="18" height="20" fill="#cde7f0"/>
+      <rect x="85" y="115" width="18" height="20" fill="#cde7f0"/>
+      <rect x="60" y="160" width="22" height="60" fill="#a8c5d6"/>
+      <text x="70" y="245" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Cities</text>
+    </g>
+
+    <!-- County -->
+    <g transform="translate(220, 40)">
+      <rect x="0" y="80" width="140" height="140" fill="none" stroke="#333" stroke-width="3"/>
+      <polygon points="70,30 0,80 140,80" fill="none" stroke="#333" stroke-width="3"/>
+      <rect x="15" y="100" width="22" height="22" fill="#cde7f0"/>
+      <rect x="45" y="100" width="22" height="22" fill="#cde7f0"/>
+      <rect x="75" y="100" width="22" height="22" fill="#cde7f0"/>
+      <rect x="105" y="100" width="22" height="22" fill="#cde7f0"/>
+      <rect x="15" y="135" width="22" height="22" fill="#cde7f0"/>
+      <rect x="45" y="135" width="22" height="22" fill="#cde7f0"/>
+      <rect x="75" y="135" width="22" height="22" fill="#cde7f0"/>
+      <rect x="105" y="135" width="22" height="22" fill="#cde7f0"/>
+      <rect x="60" y="170" width="22" height="50" fill="#a8c5d6"/>
+      <text x="70" y="245" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Counties</text>
+    </g>
+
+    <!-- School district -->
+    <g transform="translate(440, 40)">
+      <rect x="10" y="100" width="120" height="120" fill="none" stroke="#333" stroke-width="3"/>
+      <polygon points="70,40 10,100 130,100" fill="#f4c430" stroke="#333" stroke-width="3"/>
+      <rect x="25" y="120" width="22" height="22" fill="#cde7f0"/>
+      <rect x="55" y="120" width="22" height="22" fill="#cde7f0"/>
+      <rect x="85" y="120" width="22" height="22" fill="#cde7f0"/>
+      <rect x="25" y="155" width="22" height="22" fill="#cde7f0"/>
+      <rect x="55" y="155" width="22" height="22" fill="#cde7f0"/>
+      <rect x="85" y="155" width="22" height="22" fill="#cde7f0"/>
+      <text x="70" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">📚</text>
+      <text x="70" y="245" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">School Districts</text>
+    </g>
+
+    <!-- Special districts -->
+    <g transform="translate(660, 40)">
+      <rect x="0" y="70" width="140" height="150" fill="none" stroke="#333" stroke-width="3"/>
+      <polygon points="70,20 0,70 140,70" fill="none" stroke="#333" stroke-width="3"/>
+      <rect x="20" y="90" width="24" height="24" fill="#cde7f0"/>
+      <rect x="55" y="90" width="24" height="24" fill="#cde7f0"/>
+      <rect x="95" y="90" width="24" height="24" fill="#cde7f0"/>
+      <rect x="20" y="130" width="24" height="24" fill="#cde7f0"/>
+      <rect x="55" y="130" width="24" height="24" fill="#cde7f0"/>
+      <rect x="95" y="130" width="24" height="24" fill="#cde7f0"/>
+      <rect x="58" y="170" width="24" height="50" fill="#a8c5d6"/>
+      <text x="70" y="245" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Special Districts</text>
+    </g>
+
+    <!-- State agencies -->
+    <g transform="translate(880, 40)">
+      <rect x="0" y="60" width="160" height="160" fill="none" stroke="#333" stroke-width="3"/>
+      <polygon points="80,10 0,60 160,60" fill="none" stroke="#333" stroke-width="3"/>
+      <line x1="80" y1="-20" x2="80" y2="10" stroke="#333" stroke-width="2"/>
+      <rect x="80" y="-20" width="24" height="14" fill="#e63946"/>
+      <rect x="15" y="80" width="22" height="22" fill="#cde7f0"/>
+      <rect x="45" y="80" width="22" height="22" fill="#cde7f0"/>
+      <rect x="75" y="80" width="22" height="22" fill="#cde7f0"/>
+      <rect x="105" y="80" width="22" height="22" fill="#cde7f0"/>
+      <rect x="135" y="80" width="22" height="22" fill="#cde7f0"/>
+      <rect x="15" y="115" width="22" height="22" fill="#cde7f0"/>
+      <rect x="45" y="115" width="22" height="22" fill="#cde7f0"/>
+      <rect x="75" y="115" width="22" height="22" fill="#cde7f0"/>
+      <rect x="105" y="115" width="22" height="22" fill="#cde7f0"/>
+      <rect x="135" y="115" width="22" height="22" fill="#cde7f0"/>
+      <rect x="70" y="165" width="24" height="55" fill="#a8c5d6"/>
+      <text x="80" y="245" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">State Agencies</text>
+    </g>
+
+    <!-- And more -->
+    <g transform="translate(1110, 90)">
+      <text x="60" y="60" font-size="56" font-weight="bold" fill="#999">+ +</text>
+      <text x="60" y="120" font-size="56" font-weight="bold" fill="#999">+ +</text>
+      <text x="60" y="180" text-anchor="middle" font-size="22" font-weight="bold" fill="#666">many more</text>
+    </g>
+  </g>
+
+  <!-- All linked to same shared pain -->
+  <path d="M 200 540 Q 800 600 1400 540" stroke="#c0392b" stroke-width="3" fill="none" stroke-dasharray="6,5"/>
+
+  <!-- Common pain bubble -->
+  <g transform="translate(500, 600)">
+    <rect x="0" y="0" width="600" height="120" rx="20" fill="#fdeaea" stroke="#c0392b" stroke-width="4"/>
+    <text x="300" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#c0392b">Common pain</text>
+    <text x="300" y="72" text-anchor="middle" font-size="18" fill="#333">Documents posted, but knowledge locked.</text>
+    <text x="300" y="98" text-anchor="middle" font-size="18" fill="#333">Repeated FOIA requests. Limited staff capacity. Eroding public trust.</text>
+  </g>
+
+  <!-- Bottom takeaway -->
+  <rect x="200" y="780" width="1200" height="80" rx="10" fill="#fff9e0" stroke="#f4c430" stroke-width="4"/>
+  <text x="800" y="815" text-anchor="middle" font-size="22" fill="#333">A single proven architecture can serve thousands of public entities.</text>
+  <text x="800" y="845" text-anchor="middle" font-size="20" font-style="italic" fill="#1a4a72">The civic-technology market is large, durable, and underserved.</text>
+</svg>

@@ -1,0 +1,48 @@
+---
+title: "Municipal Transparency Chatbot"
+subtitle: "Investor Technology Primer"
+author: ""
+format:
+  revealjs:
+    theme: simple
+    transition: fade
+    slide-number: true
+    width: 1672
+    height: 941
+    margin: 0
+    center: true
+    controls: true
+    progress: true
+    hash: true
+    embed-resources: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## {background-image="storyboard/Slide 1.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 2.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 3.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 4.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 5.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 6.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 7.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 8.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 9.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 10.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 11.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 12.png" background-size="contain" background-repeat="no-repeat" background-color="white"}
+
+## {background-image="storyboard/Slide 13.png" background-size="contain" background-repeat="no-repeat" background-color="white"}

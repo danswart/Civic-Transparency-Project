@@ -1,0 +1,122 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="'Kalam', 'Comic Sans MS', cursive">
+  <rect width="1600" height="900" fill="#fdfcf7"/>
+
+  <!-- Title -->
+  <text x="800" y="80" font-size="52" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Who Bears the Burden?</text>
+  <line x1="500" y1="100" x2="1100" y2="100" stroke="#f4c430" stroke-width="8" stroke-linecap="round"/>
+  <text x="800" y="150" font-size="26" text-anchor="middle" fill="#555" font-style="italic">The cost of opacity falls on everyone who needs the information</text>
+
+  <!-- Central pile of documents -->
+  <g transform="translate(700, 380)">
+    <rect x="20" y="0" width="160" height="180" fill="#fff" stroke="#333" stroke-width="3" transform="rotate(-8 100 90)"/>
+    <rect x="40" y="20" width="160" height="180" fill="#fff" stroke="#333" stroke-width="3" transform="rotate(5 120 110)"/>
+    <rect x="0" y="40" width="160" height="180" fill="#fff" stroke="#333" stroke-width="3" transform="rotate(-3 80 130)"/>
+    <text x="100" y="130" font-size="22" text-anchor="middle" font-weight="bold" fill="#333">Municipal</text>
+    <text x="100" y="160" font-size="22" text-anchor="middle" font-weight="bold" fill="#333">Records</text>
+    <line x1="20" y1="180" x2="180" y2="180" stroke="#999" stroke-width="1" transform="rotate(-3 100 180)"/>
+  </g>
+
+  <!-- 5 audience figures around the central pile -->
+
+  <!-- Citizen (top-left) -->
+  <g transform="translate(180, 220)">
+    <circle cx="60" cy="50" r="38" fill="none" stroke="#333" stroke-width="3"/>
+    <circle cx="48" cy="45" r="3.5" fill="#333"/>
+    <circle cx="72" cy="45" r="3.5" fill="#333"/>
+    <path d="M 48 65 Q 60 72 72 65" stroke="#333" stroke-width="2" fill="none"/>
+    <line x1="60" y1="88" x2="60" y2="155" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="110" x2="30" y2="135" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="110" x2="90" y2="135" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="155" x2="40" y2="200" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="155" x2="80" y2="200" stroke="#333" stroke-width="3"/>
+    <rect x="0" y="220" width="180" height="50" rx="6" fill="#fff9e0" stroke="#f4c430" stroke-width="3"/>
+    <text x="90" y="240" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Citizens</text>
+    <text x="90" y="260" text-anchor="middle" font-size="14" fill="#555">"What did they decide?"</text>
+  </g>
+
+  <!-- Council Member (top-right) -->
+  <g transform="translate(1240, 220)">
+    <circle cx="60" cy="50" r="38" fill="none" stroke="#333" stroke-width="3"/>
+    <circle cx="48" cy="45" r="3.5" fill="#333"/>
+    <circle cx="72" cy="45" r="3.5" fill="#333"/>
+    <path d="M 48 65 Q 60 72 72 65" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- Tie -->
+    <polygon points="56,90 64,90 68,140 52,140" fill="#c0392b"/>
+    <line x1="60" y1="88" x2="60" y2="155" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="110" x2="30" y2="135" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="110" x2="90" y2="135" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="155" x2="40" y2="200" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="155" x2="80" y2="200" stroke="#333" stroke-width="3"/>
+    <rect x="-20" y="220" width="220" height="50" rx="6" fill="#fff9e0" stroke="#f4c430" stroke-width="3"/>
+    <text x="90" y="240" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Council Members</text>
+    <text x="90" y="260" text-anchor="middle" font-size="14" fill="#555">"What's the history here?"</text>
+  </g>
+
+  <!-- Journalist (middle-left) -->
+  <g transform="translate(180, 530)">
+    <circle cx="60" cy="50" r="38" fill="none" stroke="#333" stroke-width="3"/>
+    <circle cx="48" cy="45" r="3.5" fill="#333"/>
+    <circle cx="72" cy="45" r="3.5" fill="#333"/>
+    <path d="M 48 65 Q 60 72 72 65" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- Notepad -->
+    <rect x="80" y="100" width="30" height="40" fill="#fff" stroke="#333" stroke-width="2"/>
+    <line x1="85" y1="110" x2="105" y2="110" stroke="#888" stroke-width="1"/>
+    <line x1="85" y1="118" x2="105" y2="118" stroke="#888" stroke-width="1"/>
+    <line x1="85" y1="126" x2="100" y2="126" stroke="#888" stroke-width="1"/>
+    <line x1="60" y1="88" x2="60" y2="155" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="110" x2="30" y2="135" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="110" x2="85" y2="105" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="155" x2="40" y2="200" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="155" x2="80" y2="200" stroke="#333" stroke-width="3"/>
+    <rect x="0" y="220" width="180" height="50" rx="6" fill="#fff9e0" stroke="#f4c430" stroke-width="3"/>
+    <text x="90" y="240" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Journalists</text>
+    <text x="90" y="260" text-anchor="middle" font-size="14" fill="#555">"Trace this across years"</text>
+  </g>
+
+  <!-- City Staff (middle-right) -->
+  <g transform="translate(1240, 530)">
+    <circle cx="60" cy="50" r="38" fill="none" stroke="#333" stroke-width="3"/>
+    <!-- Hard hat -->
+    <path d="M 22 50 Q 60 18 98 50 L 95 38 Q 60 8 25 38 Z" fill="#f4c430" stroke="#333" stroke-width="2"/>
+    <circle cx="48" cy="55" r="3.5" fill="#333"/>
+    <circle cx="72" cy="55" r="3.5" fill="#333"/>
+    <path d="M 48 75 Q 60 82 72 75" stroke="#333" stroke-width="2" fill="none"/>
+    <line x1="60" y1="88" x2="60" y2="155" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="110" x2="30" y2="135" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="110" x2="90" y2="135" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="155" x2="40" y2="200" stroke="#333" stroke-width="3"/>
+    <line x1="60" y1="155" x2="80" y2="200" stroke="#333" stroke-width="3"/>
+    <rect x="-20" y="220" width="220" height="50" rx="6" fill="#fff9e0" stroke="#f4c430" stroke-width="3"/>
+    <text x="90" y="240" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">City Staff</text>
+    <text x="90" y="260" text-anchor="middle" font-size="14" fill="#555">"Find prior actions fast"</text>
+  </g>
+
+  <!-- Civic Org (bottom) -->
+  <g transform="translate(700, 700)">
+    <circle cx="40" cy="40" r="28" fill="none" stroke="#333" stroke-width="3"/>
+    <circle cx="32" cy="36" r="3" fill="#333"/>
+    <circle cx="48" cy="36" r="3" fill="#333"/>
+    <path d="M 32 50 Q 40 56 48 50" stroke="#333" stroke-width="2" fill="none"/>
+
+    <circle cx="100" cy="40" r="28" fill="none" stroke="#333" stroke-width="3"/>
+    <circle cx="92" cy="36" r="3" fill="#333"/>
+    <circle cx="108" cy="36" r="3" fill="#333"/>
+    <path d="M 92 50 Q 100 56 108 50" stroke="#333" stroke-width="2" fill="none"/>
+
+    <circle cx="160" cy="40" r="28" fill="none" stroke="#333" stroke-width="3"/>
+    <circle cx="152" cy="36" r="3" fill="#333"/>
+    <circle cx="168" cy="36" r="3" fill="#333"/>
+    <path d="M 152 50 Q 160 56 168 50" stroke="#333" stroke-width="2" fill="none"/>
+
+    <rect x="-20" y="90" width="240" height="50" rx="6" fill="#fff9e0" stroke="#f4c430" stroke-width="3"/>
+    <text x="100" y="110" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Civic Organizations</text>
+    <text x="100" y="130" text-anchor="middle" font-size="14" fill="#555">"Monitor spending and governance"</text>
+  </g>
+
+  <!-- Arrows to center -->
+  <path d="M 380 320 Q 550 350 680 410" stroke="#1a4a72" stroke-width="3" fill="none" stroke-dasharray="6,4" opacity="0.6"/>
+  <path d="M 1220 320 Q 1050 350 920 410" stroke="#1a4a72" stroke-width="3" fill="none" stroke-dasharray="6,4" opacity="0.6"/>
+  <path d="M 380 580 Q 550 560 690 530" stroke="#1a4a72" stroke-width="3" fill="none" stroke-dasharray="6,4" opacity="0.6"/>
+  <path d="M 1220 580 Q 1050 560 920 530" stroke="#1a4a72" stroke-width="3" fill="none" stroke-dasharray="6,4" opacity="0.6"/>
+  <path d="M 800 700 L 800 600" stroke="#1a4a72" stroke-width="3" fill="none" stroke-dasharray="6,4" opacity="0.6"/>
+</svg>
