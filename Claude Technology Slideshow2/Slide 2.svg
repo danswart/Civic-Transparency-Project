@@ -1,0 +1,363 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css"><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;family=Kalam:wght@400;700&amp;display=swap');
+      .title { font-family: 'Caveat', 'Comic Sans MS', cursive; font-weight: 700; }
+      .body  { font-family: 'Kalam', 'Comic Sans MS', cursive; }
+    ]]></style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#f7f5ef"/>
+
+  <!-- TITLE -->
+  <text x="800" y="80" font-size="56" text-anchor="middle" fill="#1a1a1a" class="title">The Transparency Gap</text>
+  <path d="M 470 97 Q 800 111 1130 95" stroke="#7fb8e6" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <text x="480" y="143" font-size="27" fill="#333" class="body">Public documents are available... but</text>
+  <rect x="1018" y="122" width="238" height="26" fill="#fff2a8" opacity="0.75"/>
+  <text x="1022" y="143" font-size="27" font-weight="bold" fill="#333" class="body">not truly accessible.</text>
+  <path d="M 480 152 L 1010 152" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- ================= LEFT: CITY RECORDS ONLINE ================= -->
+  <g transform="translate(55, 175)">
+    <!-- City hall -->
+    <g transform="translate(100, 0)">
+      <line x1="120" y1="0" x2="120" y2="20" stroke="#333" stroke-width="2"/>
+      <polygon points="120,2 140,8 120,14" fill="#a8d4a8"/>
+      <ellipse cx="120" cy="38" rx="26" ry="16" fill="#d6d6d6" stroke="#333" stroke-width="2.5"/>
+      <rect x="109" y="22" width="22" height="18" fill="#d6d6d6" stroke="#333" stroke-width="2.5"/>
+      <!-- Trees -->
+      <circle cx="35" cy="80" r="18" fill="#a8d4a8" stroke="#3a6b3a" stroke-width="2"/>
+      <line x1="35" y1="96" x2="35" y2="112" stroke="#6b4f3a" stroke-width="3"/>
+      <circle cx="205" cy="80" r="18" fill="#a8d4a8" stroke="#3a6b3a" stroke-width="2"/>
+      <line x1="205" y1="96" x2="205" y2="112" stroke="#6b4f3a" stroke-width="3"/>
+      <!-- Pediment + columns -->
+      <polygon points="50,62 190,62 170,44 70,44" fill="#e8e8e8" stroke="#333" stroke-width="2.5"/>
+      <rect x="45" y="62" width="150" height="78" fill="#fafafa" stroke="#333" stroke-width="2.5"/>
+      <line x1="68" y1="66" x2="68" y2="136" stroke="#333" stroke-width="2"/>
+      <line x1="95" y1="66" x2="95" y2="136" stroke="#333" stroke-width="2"/>
+      <line x1="120" y1="66" x2="120" y2="136" stroke="#333" stroke-width="2"/>
+      <line x1="145" y1="66" x2="145" y2="136" stroke="#333" stroke-width="2"/>
+      <line x1="172" y1="66" x2="172" y2="136" stroke="#333" stroke-width="2"/>
+      <rect x="105" y="105" width="30" height="35" fill="#7fb8e6" stroke="#333" stroke-width="2"/>
+      <rect x="36" y="140" width="168" height="6" fill="#e0e0e0" stroke="#333" stroke-width="2"/>
+    </g>
+
+    <!-- Records box -->
+    <rect x="0" y="150" width="455" height="475" rx="8" fill="#fff" stroke="#444" stroke-width="3"/>
+    <!-- Label tab -->
+    <rect x="55" y="135" width="345" height="36" rx="4" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <text x="227" y="161" text-anchor="middle" font-size="22" font-weight="bold" fill="#333" class="body">CITY RECORDS ONLINE</text>
+
+    <text x="25" y="200" font-size="20" fill="#333" class="body">We post a lot of public documents.</text>
+    <path d="M 25 208 L 410 208" stroke="#7fb8e6" stroke-width="2.5"/>
+
+    <!-- Document rows -->
+    <!-- Agendas -->
+    <g transform="translate(28, 228)">
+      <rect x="0" y="6" width="40" height="52" fill="#fff" stroke="#333" stroke-width="2"/>
+      <rect x="14" y="0" width="12" height="9" fill="#bfa074" stroke="#333" stroke-width="1.5"/>
+      <rect x="7" y="15" width="6" height="6" fill="none" stroke="#333" stroke-width="1.2"/>
+      <path d="M 8 18 L 10 20 L 13 14" stroke="#2a8c4a" stroke-width="1.3" fill="none"/>
+      <rect x="7" y="27" width="6" height="6" fill="none" stroke="#333" stroke-width="1.2"/>
+      <path d="M 8 30 L 10 32 L 13 26" stroke="#2a8c4a" stroke-width="1.3" fill="none"/>
+      <rect x="7" y="39" width="6" height="6" fill="none" stroke="#333" stroke-width="1.2"/>
+      <text x="62" y="38" font-size="19" font-weight="bold" fill="#333" class="body" letter-spacing="0.5">AGENDAS</text>
+      <line x1="180" y1="33" x2="290" y2="33" stroke="#888" stroke-width="2" stroke-dasharray="6,5"/>
+      <!-- PDF icon -->
+      <path d="M 305 8 L 335 8 L 348 21 L 348 58 L 305 58 Z" fill="#fff" stroke="#333" stroke-width="2"/>
+      <path d="M 335 8 L 335 21 L 348 21" fill="none" stroke="#333" stroke-width="2"/>
+      <rect x="309" y="33" width="35" height="16" fill="#e85a4f"/>
+      <text x="326" y="46" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" class="body">PDF</text>
+    </g>
+
+    <!-- Minutes -->
+    <g transform="translate(28, 300)">
+      <path d="M 4 0 L 32 0 L 42 10 L 42 56 L 4 56 Z" fill="#fff" stroke="#333" stroke-width="2"/>
+      <path d="M 32 0 L 32 10 L 42 10" fill="none" stroke="#333" stroke-width="2"/>
+      <line x1="10" y1="18" x2="36" y2="18" stroke="#999" stroke-width="1.2"/>
+      <line x1="10" y1="26" x2="36" y2="26" stroke="#999" stroke-width="1.2"/>
+      <line x1="10" y1="34" x2="36" y2="34" stroke="#999" stroke-width="1.2"/>
+      <line x1="10" y1="42" x2="30" y2="42" stroke="#999" stroke-width="1.2"/>
+      <text x="62" y="35" font-size="19" font-weight="bold" fill="#333" class="body" letter-spacing="0.5">MINUTES</text>
+      <line x1="178" y1="30" x2="290" y2="30" stroke="#888" stroke-width="2" stroke-dasharray="6,5"/>
+      <path d="M 305 5 L 335 5 L 348 18 L 348 55 L 305 55 Z" fill="#fff" stroke="#333" stroke-width="2"/>
+      <path d="M 335 5 L 335 18 L 348 18" fill="none" stroke="#333" stroke-width="2"/>
+      <rect x="309" y="30" width="35" height="16" fill="#e85a4f"/>
+      <text x="326" y="43" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" class="body">PDF</text>
+    </g>
+
+    <!-- Budget books -->
+    <g transform="translate(28, 372)">
+      <rect x="0" y="4" width="38" height="52" fill="#4a7ba8" stroke="#333" stroke-width="2"/>
+      <rect x="4" y="0" width="34" height="52" fill="#5a8bbc" stroke="#333" stroke-width="2"/>
+      <text x="21" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff" class="body">$</text>
+      <text x="62" y="33" font-size="19" font-weight="bold" fill="#333" class="body" letter-spacing="0.5">BUDGET BOOKS</text>
+      <line x1="248" y1="28" x2="290" y2="28" stroke="#888" stroke-width="2" stroke-dasharray="6,5"/>
+      <path d="M 305 3 L 335 3 L 348 16 L 348 53 L 305 53 Z" fill="#fff" stroke="#333" stroke-width="2"/>
+      <path d="M 335 3 L 335 16 L 348 16" fill="none" stroke="#333" stroke-width="2"/>
+      <rect x="309" y="28" width="35" height="16" fill="#e85a4f"/>
+      <text x="326" y="41" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" class="body">PDF</text>
+    </g>
+
+    <!-- Contracts -->
+    <g transform="translate(28, 444)">
+      <!-- Handshake -->
+      <path d="M 2 28 L 14 20 L 22 26 L 30 18 L 42 28 L 34 36 L 22 30 L 10 36 Z" fill="#f0d0a0" stroke="#333" stroke-width="2"/>
+      <text x="62" y="34" font-size="19" font-weight="bold" fill="#333" class="body" letter-spacing="0.5">CONTRACTS</text>
+      <line x1="205" y1="29" x2="290" y2="29" stroke="#888" stroke-width="2" stroke-dasharray="6,5"/>
+      <path d="M 305 4 L 335 4 L 348 17 L 348 54 L 305 54 Z" fill="#fff" stroke="#333" stroke-width="2"/>
+      <path d="M 335 4 L 335 17 L 348 17" fill="none" stroke="#333" stroke-width="2"/>
+      <rect x="309" y="29" width="35" height="16" fill="#e85a4f"/>
+      <text x="326" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" class="body">PDF</text>
+    </g>
+
+    <!-- Agenda packets -->
+    <g transform="translate(28, 510)">
+      <path d="M 0 14 L 14 14 L 20 6 L 44 6 L 44 50 L 0 50 Z" fill="#f4c430" stroke="#333" stroke-width="2"/>
+      <rect x="8" y="0" width="30" height="38" fill="#fff" stroke="#333" stroke-width="1.5" transform="rotate(-6 23 19)"/>
+      <rect x="12" y="4" width="30" height="38" fill="#fff" stroke="#333" stroke-width="1.5" transform="rotate(4 27 23)"/>
+      <text x="62" y="34" font-size="19" font-weight="bold" fill="#333" class="body" letter-spacing="0.5">AGENDA PACKETS</text>
+      <line x1="278" y1="29" x2="290" y2="29" stroke="#888" stroke-width="2" stroke-dasharray="6,5"/>
+      <path d="M 305 4 L 335 4 L 348 17 L 348 54 L 305 54 Z" fill="#fff" stroke="#333" stroke-width="2"/>
+      <path d="M 335 4 L 335 17 L 348 17" fill="none" stroke="#333" stroke-width="2"/>
+      <rect x="309" y="29" width="35" height="16" fill="#e85a4f"/>
+      <text x="326" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" class="body">PDF</text>
+    </g>
+
+    <!-- Blue sticky note -->
+    <rect x="60" y="580" width="290" height="36" rx="3" fill="#cde0f0" stroke="#5a8bbc" stroke-width="2"/>
+    <text x="205" y="605" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a4a72" class="body">All available. All public.</text>
+  </g>
+
+  <!-- Orange arrow 1 -->
+  <g transform="translate(530, 470)">
+    <path d="M 0 0 L 42 0 L 42 -13 L 70 13 L 42 39 L 42 26 L 0 26 Z" fill="#e8826e" stroke="#333" stroke-width="2.5"/>
+  </g>
+
+  <!-- ================= MIDDLE: THE MAZE ================= -->
+  <g transform="translate(615, 175)">
+    <!-- Coral sticky heading -->
+    <rect x="120" y="0" width="240" height="36" fill="#f7c6c8" opacity="0.85"/>
+    <text x="240" y="26" text-anchor="middle" font-size="22" font-weight="bold" fill="#c0392b" class="body" letter-spacing="1">BUT IN REALITY...</text>
+
+    <!-- Maze box -->
+    <rect x="20" y="50" width="440" height="320" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <!-- Maze walls (tangle) -->
+    <g stroke="#333" stroke-width="2.5" fill="none">
+      <path d="M 60 50 L 60 110 L 120 110 L 120 70 L 180 70"/>
+      <path d="M 100 50 L 100 90 L 80 90"/>
+      <path d="M 160 50 L 160 130 L 220 130 L 220 90"/>
+      <path d="M 240 50 L 240 100 L 300 100 L 300 60"/>
+      <path d="M 340 50 L 340 110 L 400 110"/>
+      <path d="M 380 50 L 380 90 L 440 90"/>
+      <path d="M 20 150 L 90 150 L 90 200 L 150 200"/>
+      <path d="M 60 170 L 60 240 L 130 240"/>
+      <path d="M 150 160 L 150 110"/>
+      <path d="M 190 160 L 250 160 L 250 220 L 310 220"/>
+      <path d="M 290 150 L 290 250 L 360 250"/>
+      <path d="M 330 140 L 400 140 L 400 200 L 460 200"/>
+      <path d="M 360 180 L 360 110"/>
+      <path d="M 20 280 L 100 280 L 100 330 L 160 330"/>
+      <path d="M 140 270 L 140 370"/>
+      <path d="M 180 280 L 240 280 L 240 340 L 300 340"/>
+      <path d="M 280 300 L 280 370"/>
+      <path d="M 330 290 L 390 290 L 390 350 L 460 350"/>
+      <path d="M 350 320 L 350 370"/>
+      <path d="M 410 240 L 410 300"/>
+    </g>
+
+    <!-- Scattered PDFs / docs / clouds inside maze -->
+    <g transform="translate(95, 70)">
+      <rect x="0" y="0" width="34" height="22" fill="#e85a4f"/>
+      <text x="17" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" class="body">PDF</text>
+    </g>
+    <g transform="translate(50, 95)">
+      <path d="M 0 0 L 14 0 L 22 5 L 22 30 L 0 30 Z" fill="#f4c430" stroke="#333" stroke-width="1.5"/>
+    </g>
+    <g transform="translate(255, 110)">
+      <rect x="0" y="0" width="34" height="22" fill="#e85a4f"/>
+      <text x="17" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" class="body">PDF</text>
+    </g>
+    <g transform="translate(330, 70)">
+      <path d="M 0 0 L 22 0 L 30 8 L 30 38 L 0 38 Z" fill="#fff" stroke="#333" stroke-width="1.8"/>
+      <line x1="5" y1="14" x2="25" y2="14" stroke="#999" stroke-width="1"/>
+      <line x1="5" y1="20" x2="25" y2="20" stroke="#999" stroke-width="1"/>
+    </g>
+    <g transform="translate(385, 145)">
+      <rect x="0" y="0" width="30" height="34" fill="#fff" stroke="#333" stroke-width="1.8"/>
+      <rect x="0" y="0" width="30" height="8" fill="#a8d4a8"/>
+      <line x1="0" y1="16" x2="30" y2="16" stroke="#666" stroke-width="0.8"/>
+      <line x1="0" y1="24" x2="30" y2="24" stroke="#666" stroke-width="0.8"/>
+      <line x1="10" y1="8" x2="10" y2="34" stroke="#666" stroke-width="0.8"/>
+      <line x1="20" y1="8" x2="20" y2="34" stroke="#666" stroke-width="0.8"/>
+    </g>
+    <g transform="translate(155, 165)">
+      <rect x="0" y="0" width="34" height="22" fill="#e85a4f"/>
+      <text x="17" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" class="body">PDF</text>
+    </g>
+    <!-- Cloud ??? -->
+    <g transform="translate(30, 175)">
+      <ellipse cx="40" cy="20" rx="42" ry="24" fill="#fff" stroke="#333" stroke-width="2"/>
+      <ellipse cx="20" cy="25" rx="20" ry="14" fill="#fff" stroke="#333" stroke-width="2"/>
+      <ellipse cx="62" cy="26" rx="20" ry="13" fill="#fff" stroke="#333" stroke-width="2"/>
+      <text x="40" y="28" text-anchor="middle" font-size="22" font-weight="bold" fill="#c0392b" class="body">???</text>
+    </g>
+    <g transform="translate(330, 230)">
+      <path d="M 0 0 L 22 0 L 30 8 L 30 38 L 0 38 Z" fill="#fff" stroke="#333" stroke-width="1.8"/>
+      <line x1="5" y1="14" x2="25" y2="14" stroke="#999" stroke-width="1"/>
+      <line x1="5" y1="20" x2="25" y2="20" stroke="#999" stroke-width="1"/>
+    </g>
+    <g transform="translate(360, 280)">
+      <ellipse cx="35" cy="18" rx="38" ry="22" fill="#fff" stroke="#333" stroke-width="2"/>
+      <ellipse cx="58" cy="24" rx="16" ry="11" fill="#fff" stroke="#333" stroke-width="2"/>
+      <text x="35" y="26" text-anchor="middle" font-size="20" font-weight="bold" fill="#c0392b" class="body">???</text>
+    </g>
+    <g transform="translate(255, 300)">
+      <rect x="0" y="0" width="34" height="22" fill="#e85a4f"/>
+      <text x="17" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" class="body">PDF</text>
+    </g>
+    <g transform="translate(45, 305)">
+      <rect x="0" y="0" width="34" height="22" fill="#e85a4f"/>
+      <text x="17" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" class="body">PDF</text>
+    </g>
+    <g transform="translate(155, 315)">
+      <path d="M 0 0 L 22 0 L 30 8 L 30 38 L 0 38 Z" fill="#fff" stroke="#333" stroke-width="1.8"/>
+      <line x1="5" y1="14" x2="25" y2="14" stroke="#999" stroke-width="1"/>
+    </g>
+
+    <!-- Pain point list under maze -->
+    <g transform="translate(20, 395)">
+      <!-- icon: doc -->
+      <path d="M 4 0 L 24 0 L 32 8 L 32 36 L 4 36 Z" fill="#fff" stroke="#333" stroke-width="2"/>
+      <path d="M 24 0 L 24 8 L 32 8" fill="none" stroke="#333" stroke-width="2"/>
+      <rect x="8" y="14" width="8" height="5" fill="none" stroke="#5a8bbc" stroke-width="1.2"/>
+      <line x1="9" y1="24" x2="27" y2="24" stroke="#999" stroke-width="1"/>
+      <text x="48" y="25" font-size="19" fill="#333" class="body">unstructured PDFs</text>
+      <line x1="48" y1="32" x2="215" y2="32" stroke="#b9a7d4" stroke-width="2.5"/>
+    </g>
+    <g transform="translate(20, 445)">
+      <rect x="6" y="6" width="26" height="32" fill="#fff" stroke="#333" stroke-width="2"/>
+      <rect x="14" y="0" width="10" height="8" fill="#bfa074" stroke="#333" stroke-width="1.5"/>
+      <line x1="11" y1="16" x2="27" y2="16" stroke="#999" stroke-width="1"/>
+      <line x1="11" y1="23" x2="27" y2="23" stroke="#999" stroke-width="1"/>
+      <text x="48" y="28" font-size="19" fill="#333" class="body">documents in silos</text>
+      <line x1="48" y1="35" x2="220" y2="35" stroke="#b9a7d4" stroke-width="2.5"/>
+    </g>
+    <g transform="translate(20, 495)">
+      <rect x="4" y="4" width="34" height="30" fill="#fff" stroke="#333" stroke-width="2"/>
+      <rect x="4" y="4" width="34" height="9" fill="#e85a4f"/>
+      <line x1="13" y1="4" x2="13" y2="0" stroke="#333" stroke-width="2"/>
+      <line x1="29" y1="4" x2="29" y2="0" stroke="#333" stroke-width="2"/>
+      <line x1="13" y1="20" x2="29" y2="20" stroke="#999" stroke-width="1"/>
+      <line x1="13" y1="27" x2="29" y2="27" stroke="#999" stroke-width="1"/>
+      <text x="48" y="27" font-size="19" fill="#333" class="body">hard to compare across years</text>
+      <line x1="48" y1="34" x2="312" y2="34" stroke="#b9a7d4" stroke-width="2.5"/>
+    </g>
+    <g transform="translate(20, 545)">
+      <!-- shovel -->
+      <line x1="20" y1="2" x2="14" y2="26" stroke="#6b4f3a" stroke-width="3"/>
+      <path d="M 8 26 Q 14 40 22 30 Z" fill="#999" stroke="#333" stroke-width="1.8"/>
+      <rect x="15" y="0" width="10" height="5" fill="#6b4f3a" stroke="#333" stroke-width="1.5"/>
+      <text x="48" y="27" font-size="19" fill="#333" class="body">too much manual digging</text>
+      <line x1="48" y1="34" x2="278" y2="34" stroke="#b9a7d4" stroke-width="2.5"/>
+    </g>
+  </g>
+
+  <!-- Orange arrow 2 -->
+  <g transform="translate(1085, 470)">
+    <path d="M 0 0 L 38 0 L 38 -13 L 64 13 L 38 39 L 38 26 L 0 26 Z" fill="#e8826e" stroke="#333" stroke-width="2.5"/>
+  </g>
+
+  <!-- ================= RIGHT: RESIDENT ================= -->
+  <g transform="translate(1160, 175)">
+    <!-- Lavender sticky heading -->
+    <rect x="45" y="0" width="320" height="36" fill="#d4c8e8" opacity="0.8"/>
+    <text x="205" y="26" text-anchor="middle" font-size="20" font-weight="bold" fill="#5a3a8a" class="body" letter-spacing="0.5">FOR RESIDENTS, IT MEANS...</text>
+
+    <!-- Confused resident -->
+    <g transform="translate(20, 55)">
+      <!-- Scribble stress above head -->
+      <path d="M 50 5 q 12 -10 24 0 q 12 10 0 18 q -14 8 -26 -2 q -10 -10 4 -18 q 14 -6 22 6"
+            stroke="#333" stroke-width="2" fill="none"/>
+      <!-- floating ? -->
+      <text x="0" y="50" font-size="34" font-weight="bold" fill="#c0392b" class="body">?</text>
+      <text x="115" y="48" font-size="38" font-weight="bold" fill="#c0392b" class="body">?</text>
+      <!-- Head -->
+      <circle cx="62" cy="62" r="38" fill="#fff" stroke="#333" stroke-width="2.5"/>
+      <!-- Hair -->
+      <path d="M 28 56 Q 26 30 62 28 Q 98 30 96 56 Q 90 44 80 46 Q 70 38 62 40 Q 54 38 44 46 Q 34 44 28 56" fill="#a98b6a" stroke="#333" stroke-width="2"/>
+      <!-- Worried face -->
+      <path d="M 48 60 Q 53 56 58 60" stroke="#333" stroke-width="2" fill="none"/>
+      <path d="M 66 60 Q 71 56 76 60" stroke="#333" stroke-width="2" fill="none"/>
+      <path d="M 52 82 Q 62 75 72 82" stroke="#333" stroke-width="2" fill="none"/>
+      <!-- Hand on head -->
+      <path d="M 30 55 Q 22 40 38 38" stroke="#333" stroke-width="2.5" fill="none"/>
+      <!-- Body (green shirt) -->
+      <path d="M 30 100 Q 62 88 94 100 L 100 175 L 24 175 Z" fill="#9ec99e" stroke="#333" stroke-width="2.5"/>
+      <path d="M 30 100 Q 18 120 22 150" stroke="#333" stroke-width="2.5" fill="none"/>
+    </g>
+
+    <!-- Speech bubbles -->
+    <g transform="translate(150, 60)">
+      <rect x="0" y="0" width="195" height="46" rx="12" fill="#fff" stroke="#333" stroke-width="2"/>
+      <polygon points="0,25 -14,35 0,38" fill="#fff" stroke="#333" stroke-width="2"/>
+      <!-- circular arrows icon -->
+      <path d="M 22 14 a 10 10 0 1 1 -3 -7" stroke="#5a8bbc" stroke-width="2.2" fill="none"/>
+      <polygon points="19,4 26,7 20,12" fill="#5a8bbc"/>
+      <path d="M 18 30 a 10 10 0 1 1 3 7" stroke="#e8826e" stroke-width="2.2" fill="none"/>
+      <polygon points="21,40 14,37 20,32" fill="#e8826e"/>
+      <text x="45" y="29" font-size="17" fill="#333" class="body">What changed?</text>
+    </g>
+    <g transform="translate(170, 120)">
+      <rect x="0" y="0" width="190" height="58" rx="12" fill="#fff" stroke="#333" stroke-width="2"/>
+      <polygon points="0,30 -16,42 0,44" fill="#fff" stroke="#333" stroke-width="2"/>
+      <circle cx="24" cy="29" r="13" fill="#f4c430" stroke="#b8860b" stroke-width="2"/>
+      <text x="24" y="36" text-anchor="middle" font-size="16" font-weight="bold" fill="#b8860b" class="body">$</text>
+      <text x="44" y="25" font-size="16" fill="#333" class="body">What did this</text>
+      <text x="44" y="46" font-size="16" fill="#333" class="body">project cost?</text>
+    </g>
+    <g transform="translate(150, 200)">
+      <rect x="0" y="0" width="210" height="58" rx="12" fill="#fff" stroke="#333" stroke-width="2"/>
+      <polygon points="0,28 -16,38 0,42" fill="#fff" stroke="#333" stroke-width="2"/>
+      <!-- calendar -->
+      <rect x="10" y="16" width="28" height="26" fill="#fff" stroke="#333" stroke-width="2"/>
+      <rect x="10" y="16" width="28" height="8" fill="#e8826e"/>
+      <line x1="17" y1="16" x2="17" y2="12" stroke="#333" stroke-width="2"/>
+      <line x1="31" y1="16" x2="31" y2="12" stroke="#333" stroke-width="2"/>
+      <text x="50" y="25" font-size="16" fill="#333" class="body">When was this</text>
+      <text x="50" y="46" font-size="16" fill="#333" class="body">first discussed?</text>
+    </g>
+
+    <!-- Dashed callout -->
+    <g transform="translate(25, 280)">
+      <rect x="0" y="0" width="335" height="80" rx="5" fill="none" stroke="#666" stroke-width="2" stroke-dasharray="6,4"/>
+      <text x="167" y="35" text-anchor="middle" font-size="20" fill="#333" class="body">No easy answers.</text>
+      <text x="167" y="62" text-anchor="middle" font-size="20" fill="#333" class="body">Just more searching.</text>
+    </g>
+
+    <!-- Framed warning takeaway -->
+    <g transform="translate(25, 385)">
+      <rect x="0" y="0" width="360" height="135" rx="6" fill="#fff" stroke="#5a8bbc" stroke-width="3"/>
+      <!-- decorative dashes -->
+      <line x1="-18" y1="20" x2="-6" y2="14" stroke="#5a8bbc" stroke-width="2.5"/>
+      <line x1="-22" y1="40" x2="-8" y2="38" stroke="#5a8bbc" stroke-width="2.5"/>
+      <line x1="-18" y1="60" x2="-6" y2="62" stroke="#5a8bbc" stroke-width="2.5"/>
+      <line x1="378" y1="20" x2="366" y2="14" stroke="#5a8bbc" stroke-width="2.5"/>
+      <line x1="382" y1="40" x2="368" y2="38" stroke="#5a8bbc" stroke-width="2.5"/>
+      <line x1="378" y1="60" x2="366" y2="62" stroke="#5a8bbc" stroke-width="2.5"/>
+      <!-- warning circle -->
+      <circle cx="42" cy="68" r="26" fill="#f4c430" stroke="#333" stroke-width="2.5"/>
+      <text x="42" y="79" text-anchor="middle" font-size="38" font-weight="bold" fill="#333" class="body">!</text>
+      <text x="82" y="55" font-size="24" fill="#333" class="title">Transparent in theory.</text>
+      <text x="82" y="100" font-size="24" fill="#333" class="title">Opaque in practice.</text>
+      <line x1="82" y1="108" x2="232" y2="108" stroke="#e85a4f" stroke-width="2.5"/>
+    </g>
+  </g>
+
+  <!-- Slide number -->
+  <g transform="translate(1480, 855)">
+    <rect x="0" y="0" width="32" height="32" rx="3" fill="none" stroke="#333" stroke-width="2"/>
+    <text x="16" y="23" text-anchor="middle" font-size="18" font-weight="bold" fill="#333" class="body">2</text>
+    <text x="60" y="24" text-anchor="middle" font-size="16" fill="#666" class="body">Slide 2</text>
+  </g>
+</svg>

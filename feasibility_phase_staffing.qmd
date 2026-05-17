@@ -1,0 +1,239 @@
+---
+title: "Staffing the Feasibility Phase"
+subtitle: "Civic Data Access · roles, the one real hire, and what the verdict must say before you scale"
+author: "Strategy / project-management working document"
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    embed-resources: true
+---
+
+# How to read this document
+
+This is the companion to the feasibility-test design. That document
+defined **what experiment de-risks the company**. This one answers a
+narrower, dangerous-if-gotten-wrong question:
+
+> **Who do you hire — and at what level, and when — to run the
+> auto-mapping proposer testing phase?**
+
+The danger is not under-hiring. It is **over-hiring the wrong skill**:
+staffing the testing phase as though it were primarily a data-science
+problem, when it is overwhelmingly an experiment-design and
+project-management problem with a small, sharp data-science core.
+
+The single sentence to keep in view:
+
+> The phasing of *permanent* data expertise must be **downstream of the
+> verdict**, because the verdict tells you which kind of company you are
+> hiring for.
+
+---
+
+# The trap in the question "what expertise per stage?"
+
+The intuitive move is to assign a seniority level of data scientist to
+each stage of the test. That framing is wrong, and acting on it produces
+a bad hire.
+
+Re-read what the feasibility test actually requires: freezing corpora,
+quarantining the answer key, agreeing thresholds in writing, recruiting
+a *non-engineer* test subject, classifying interventions, producing a
+signed-off verdict. That is mostly **discipline and protocol** labor.
+The genuine data-science core is real but narrow and time-boxed.
+
+So the productive framing is not "expertise per stage." It is:
+
+> **What distinct roles does this experiment require, which ones must be
+> the same person, which absolutely cannot be, and which is the only
+> real hire?**
+
+---
+
+# The four roles the experiment actually requires
+
+The roles are *deliberately mismatched in seniority*. Hiring uniformly
+senior data people across all of them would **weaken** the experiment.
+
+## Role 1 — The Proposer Builder *(the one real hire)*
+
+- **Skill:** genuine data/ML depth — schema inference, fuzzy entity
+  resolution, schema-era detection, draft-config emission.
+- **Scope:** bounded. Build a proposer good enough to *test*, not to
+  ship. Over-engineering here before the verdict is the exact
+  "build the satisfying part" trap.
+- **Hard constraint:** must **not** also be the person who scores
+  whether it passed. Builder-grades-own-homework is the primary way
+  feasibility tests lie.
+- **Employment form:** **contractor / bounded statement of work, not a
+  permanent senior hire.** Before a Green verdict the proposer is a
+  research instrument, not a product. A permanent senior data-science
+  hire here is premature commitment — scaling the team before the
+  experiment that justifies the team.
+
+## Role 2 — The Experiment Owner *(this is you — do not hire it out)*
+
+- **Skill:** protocol integrity and discipline, not data science.
+- **Owns:** inputs frozen, answer key quarantined, thresholds committed
+  *in writing before the run*, verdict mapped honestly to the table.
+- **Why you:** this is the most important seat in the testing phase and
+  the one founders most often leave structurally empty because it is
+  less satisfying than building. If it is not held with authority, the
+  test has no teeth. You have already demonstrated this instinct;
+  occupy the seat formally.
+
+## Role 3 — The Ground-Truth Steward *(also you — likely not hireable)*
+
+- **Skill:** deep domain judgment of the TEA corpus + data sense.
+- **Owns:** confirming the answer key is correct and expressible in the
+  config schema; adjudicating the step-6 classification —
+  *was this intervention mechanical or institutional judgment?*
+- **Why not a hire:** that adjudication is the crux result of the entire
+  experiment, and it rests on 29 years of hand normalization that is
+  not a transferable résumé credential. A new hire would be guessing at
+  distinctions you know in your bones. Trying to delegate this
+  outsources the one judgment the company's verdict depends on.
+
+## Role 4 — The Non-Engineer Test Subject *(deliberately NOT an expert)*
+
+- **Profile:** a genuine finance / records-analyst type. **Not** a
+  developer. **Not** you.
+- **Purpose:** the NEC metric (can a non-engineer finish the proposer's
+  draft?) is only valid if the measured person is genuinely
+  non-technical. Staffing this with someone too skilled silently
+  invalidates the most important secondary metric.
+- **Note:** this is not a hire to *staff* the project — it is a person
+  (hired or borrowed) to *be the measured subject*. The instinct to put
+  your best person on the test destroys the test here.
+
+---
+
+# Role-to-person map
+
+| Role | Who | Employment form | Can it be shared? |
+|---|---|---|---|
+| 1 · Proposer Builder | External specialist | **Bounded contract / SOW** | Must NOT also score (Role 2/3) |
+| 2 · Experiment Owner | **You** | Founder | May share with Role 3 |
+| 3 · Ground-Truth Steward | **You** | Founder | May share with Role 2 |
+| 4 · Non-Engineer Subject | Borrowed/hired analyst | Short engagement | Must NOT be you or a developer |
+
+The firewall that matters most: **Role 1 is structurally separated from
+Roles 2 and 3.** The builder builds; the founder (owner + steward)
+judges. They are never the same person.
+
+---
+
+# The one real hire, specified: the Proposer Builder contract
+
+This is the only genuine hiring decision the testing phase forces. Spec
+it tightly.
+
+## What they must be able to do
+
+- Ingest heterogeneous spreadsheets (multi-tab, multi-era, inconsistent
+  headers) and emit a **declarative draft mapping config** — not
+  per-corpus bespoke code.
+- Implement: field identification, entity canonicalization, schema-era
+  detection, authority/version resolution, cross-year linkage
+  (the five decision types from the feasibility test).
+- Attach a **confidence signal** to each emitted decision (this feeds
+  the Failure-Honesty metric — non-negotiable, not a nice-to-have).
+- Work to a config **schema you control**, not invent their own format.
+
+## Bounded statement of work (shape, not legalese)
+
+- **Deliverable:** a proposer that runs *cold* against a supplied corpus
+  and emits a scored-against-ground-truth draft config, plus
+  per-decision confidence.
+- **Explicitly out of scope:** the chatbot, the chart UI, the retrieval
+  engine, production hardening. (Those are post-verdict. Including them
+  now is the trap.)
+- **Duration:** fixed. A research instrument, not a product build.
+- **Acceptance:** the proposer runs reproducibly and emits the artifacts
+  the scoring needs — *not* "the proposer achieves X% accuracy."
+  Whether it hits the threshold is the **experiment's** finding, judged
+  by Roles 2/3 — never an acceptance criterion the builder is paid to
+  meet (paying the builder on the accuracy number recreates
+  grade-your-own-homework through the contract).
+
+## The explicit firewall clause
+
+- The builder supplies the instrument and its raw outputs.
+- The builder does **not** have access to the quarantined answer key.
+- The builder does **not** score DAR/NEC/Failure-Honesty.
+- Scoring and verdict are owned solely by Roles 2/3 (you).
+
+---
+
+# When permanent data hires happen — and why only then
+
+Permanent data expertise is **deferred until after the verdict**,
+because the verdict determines *which company you are staffing*:
+
+| Verdict | What it means you're hiring for | Permanent data team implication |
+|---|---|---|
+| **Green** (DAR ≥ 80%, NEC ≥ 90%, Honesty ≥ 95%) | Turnkey software company | Lean data team; invest in proposer + template library as core IP |
+| **Yellow-Template** (DAR 50–79%, NEC ≥ 90%) | Template-driven software company | Hire for *template library* curation; different skill mix than turnkey |
+| **Yellow-Watch** (DAR ≥ 65%, NEC < 90%) | Higher-touch onboarding company | Hire onboarding/solutions specialists, not just modelers; price for it |
+| **Red** (DAR < 50% or Honesty < 90%) | Not yet a Model B company | Do not hire permanently. Re-design proposer or reconsider model |
+
+Hiring a permanent senior data team *before* the verdict commits payroll
+to a company whose shape is still unknown. Each verdict needs a
+*different* permanent team. That is the whole reason the one real hire
+is a **bounded contract**, not a permanent seat.
+
+---
+
+# The full process, in one sequence
+
+1. **Occupy Roles 2 & 3 yourself, formally.** Owner + Steward are you.
+2. **Freeze raw TEA inputs and the hand-normalized answer key;
+   quarantine the key** from anyone who will tune the proposer.
+3. **Confirm the answer key is expressible in the config schema.**
+   If it is not, the schema is wrong — record that as an early finding
+   before any build.
+4. **Write the four metric thresholds down** (DAR, NEC,
+   Failure-Honesty, Time-to-First-Trustworthy-Config) and sign them
+   before anything runs.
+5. **Scope and contract Role 1** (Proposer Builder) on a bounded SOW
+   with the firewall clause. Builder gets raw inputs and the config
+   schema — never the answer key, never the scoring.
+6. **Acquire the two secondary corpora:** one non-TEA municipal
+   (generalization), one deliberately hostile (failure-mode probe).
+7. **Recruit Role 4** — a genuine non-engineer analyst — for the NEC
+   test. Not you. Not a developer.
+8. **Run the proposer cold** against all three corpora.
+9. **Roles 2/3 score** DAR, NEC, Failure-Honesty,
+   Time-to-First-Trustworthy-Config. Classify every intervention as
+   *mechanical* vs. *institutional judgment*.
+10. **Map results to the verdict table. Record the verdict and the
+    numbers.** This signed verdict — not a working product — is the
+    deliverable of the entire phase.
+11. **Only now** decide the permanent data team, sized and shaped to
+    the verdict that came back.
+12. **Only after a Green or re-scoped Yellow:** begin engine/demo build.
+
+---
+
+# The two failure modes this document exists to prevent
+
+1. **Over-hiring the wrong skill.** Staffing the test with uniformly
+   senior data scientists feels rigorous but actually weakens the
+   experiment: it removes the non-engineer signal (Role 4) and invites
+   builder-grades-own-homework (Role 1 ≠ Roles 2/3). The roles are
+   mismatched in seniority *on purpose*.
+
+2. **Premature permanent commitment.** Hiring a permanent data team
+   before the verdict scales an organization whose shape is still
+   unknown. Each verdict implies a *different* permanent team. The one
+   real hire in this phase is a bounded contract; everything permanent
+   waits for the number.
+
+The discipline is the same one running through the whole project: build
+and staff the part that **proves** the company before the part that
+**polishes** it — and let the verdict, not enthusiasm, authorize the
+next dollar of payroll.

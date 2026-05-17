@@ -1,0 +1,152 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css"><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;family=Kalam:wght@400;700&amp;display=swap');
+      .title { font-family: 'Caveat', 'Comic Sans MS', cursive; font-weight: 700; }
+      .body  { font-family: 'Kalam', 'Comic Sans MS', cursive; }
+    ]]></style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#f7f5ef"/>
+
+  <text x="800" y="80" font-size="56" text-anchor="middle" fill="#1a1a1a" class="title">Where Keyword Search Stops</text>
+  <path d="M 450 97 Q 800 111 1150 95" stroke="#7fb8e6" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <text x="430" y="143" font-size="27" fill="#333" class="body">Our prototype works — but it treats</text>
+  <rect x="958" y="122" width="222" height="26" fill="#fff2a8" opacity="0.75"/>
+  <text x="962" y="143" font-size="27" font-weight="bold" fill="#333" class="body">words as symbols.</text>
+  <path d="M 430 152 L 1180 152" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- ===== LEFT: what it does well ===== -->
+  <g transform="translate(70, 185)">
+    <rect x="120" y="0" width="320" height="36" fill="#c8e6c8" opacity="0.85"/>
+    <text x="280" y="26" text-anchor="middle" font-size="21" font-weight="bold" fill="#2a6b3a" class="body" letter-spacing="0.5">THE PROTOTYPE TODAY</text>
+
+    <!-- Search bar -->
+    <g transform="translate(50, 60)">
+      <rect x="0" y="0" width="370" height="50" rx="25" fill="#fff" stroke="#333" stroke-width="2.5"/>
+      <circle cx="32" cy="25" r="11" fill="none" stroke="#333" stroke-width="2.5"/>
+      <line x1="40" y1="33" x2="50" y2="43" stroke="#333" stroke-width="2.5"/>
+      <text x="70" y="33" font-size="22" font-weight="bold" fill="#1a4a72" class="body">"drainage"</text>
+      <text x="240" y="33" font-size="16" fill="#999" class="body">— exact word</text>
+    </g>
+
+    <!-- Arrow down -->
+    <path d="M 235 120 L 235 155" stroke="#333" stroke-width="3" fill="none" marker-end="url(#a4)"/>
+
+    <!-- Returns 3 docs -->
+    <g transform="translate(40, 165)">
+      <rect x="0" y="0" width="110" height="130" rx="4" fill="#d4eed4" stroke="#2a8c4a" stroke-width="2.5"/>
+      <text x="55" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#2a6b3a" class="body">DOC 1</text>
+      <rect x="20" y="55" width="70" height="14" fill="#fff2a8"/>
+      <text x="55" y="67" text-anchor="middle" font-size="12" fill="#333" class="body">drainage</text>
+      <line x1="15" y1="88" x2="95" y2="88" stroke="#999" stroke-width="1.5"/>
+      <line x1="15" y1="102" x2="95" y2="102" stroke="#999" stroke-width="1.5"/>
+      <line x1="15" y1="116" x2="80" y2="116" stroke="#999" stroke-width="1.5"/>
+
+      <rect x="130" y="0" width="110" height="130" rx="4" fill="#d4eed4" stroke="#2a8c4a" stroke-width="2.5"/>
+      <text x="185" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#2a6b3a" class="body">DOC 2</text>
+      <rect x="150" y="55" width="70" height="14" fill="#fff2a8"/>
+      <text x="185" y="67" text-anchor="middle" font-size="12" fill="#333" class="body">drainage</text>
+      <line x1="145" y1="88" x2="225" y2="88" stroke="#999" stroke-width="1.5"/>
+      <line x1="145" y1="102" x2="225" y2="102" stroke="#999" stroke-width="1.5"/>
+      <line x1="145" y1="116" x2="210" y2="116" stroke="#999" stroke-width="1.5"/>
+
+      <rect x="260" y="0" width="110" height="130" rx="4" fill="#d4eed4" stroke="#2a8c4a" stroke-width="2.5"/>
+      <text x="315" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#2a6b3a" class="body">DOC 3</text>
+      <rect x="280" y="55" width="70" height="14" fill="#fff2a8"/>
+      <text x="315" y="67" text-anchor="middle" font-size="12" fill="#333" class="body">drainage</text>
+      <line x1="275" y1="88" x2="355" y2="88" stroke="#999" stroke-width="1.5"/>
+      <line x1="275" y1="102" x2="355" y2="102" stroke="#999" stroke-width="1.5"/>
+      <line x1="275" y1="116" x2="340" y2="116" stroke="#999" stroke-width="1.5"/>
+    </g>
+
+    <!-- Strengths list -->
+    <g transform="translate(45, 320)">
+      <text x="0" y="25" font-size="19" fill="#2a6b3a" class="body">✓ Finds exact words fast</text>
+      <text x="0" y="55" font-size="19" fill="#2a6b3a" class="body">✓ Cheap, simple, transparent</text>
+      <text x="0" y="85" font-size="19" fill="#2a6b3a" class="body">✓ Already built &amp; deployed</text>
+    </g>
+
+    <!-- Green sticky -->
+    <rect x="90" y="425" width="290" height="36" rx="3" fill="#c8e6c8" stroke="#2a8c4a" stroke-width="2"/>
+    <text x="235" y="450" text-anchor="middle" font-size="19" font-weight="bold" fill="#2a6b3a" class="body">A solid first step.</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="595" y1="195" x2="595" y2="730" stroke="#aaa" stroke-width="2" stroke-dasharray="8,6"/>
+
+  <!-- ===== RIGHT: where it falls short ===== -->
+  <g transform="translate(640, 185)">
+    <rect x="130" y="0" width="320" height="36" fill="#f7c6c8" opacity="0.85"/>
+    <text x="290" y="26" text-anchor="middle" font-size="21" font-weight="bold" fill="#c0392b" class="body" letter-spacing="0.5">WHAT IT CANNOT DO</text>
+
+    <!-- Citizen asking a real question -->
+    <g transform="translate(20, 55)">
+      <circle cx="40" cy="40" r="30" fill="#fff" stroke="#333" stroke-width="2.5"/>
+      <circle cx="31" cy="37" r="3" fill="#333"/>
+      <circle cx="49" cy="37" r="3" fill="#333"/>
+      <path d="M 31 50 Q 40 56 49 50" stroke="#333" stroke-width="2" fill="none"/>
+      <line x1="40" y1="70" x2="40" y2="115" stroke="#333" stroke-width="2.5"/>
+      <line x1="40" y1="85" x2="22" y2="105" stroke="#333" stroke-width="2.5"/>
+      <line x1="40" y1="85" x2="58" y2="105" stroke="#333" stroke-width="2.5"/>
+      <!-- speech bubble -->
+      <rect x="85" y="0" width="430" height="100" rx="14" fill="#fff" stroke="#333" stroke-width="2.5"/>
+      <polygon points="85,55 68,72 85,75" fill="#fff" stroke="#333" stroke-width="2.5"/>
+      <text x="300" y="32" text-anchor="middle" font-size="18" fill="#333" class="body">"How has the city handled recurring</text>
+      <text x="300" y="58" text-anchor="middle" font-size="18" fill="#333" class="body">stormwater complaints in my</text>
+      <text x="300" y="84" text-anchor="middle" font-size="18" fill="#333" class="body">neighborhood over the past 5 years?"</text>
+    </g>
+
+    <!-- Arrow down -->
+    <path d="M 280 165 L 280 195" stroke="#c0392b" stroke-width="3" fill="none" marker-end="url(#a4b)"/>
+
+    <!-- Limitations -->
+    <g transform="translate(20, 205)">
+      <rect x="0" y="0" width="540" height="46" rx="6" fill="#fdeaea" stroke="#c0392b" stroke-width="2"/>
+      <text x="20" y="30" font-size="19" fill="#333" class="body">✗ Doesn't know <tspan font-weight="bold">"drainage" ≈ "stormwater"</tspan></text>
+
+      <rect x="0" y="58" width="540" height="46" rx="6" fill="#fdeaea" stroke="#c0392b" stroke-width="2"/>
+      <text x="20" y="88" font-size="19" fill="#333" class="body">✗ Can't <tspan font-weight="bold">link records across years</tspan></text>
+
+      <rect x="0" y="116" width="540" height="46" rx="6" fill="#fdeaea" stroke="#c0392b" stroke-width="2"/>
+      <text x="20" y="146" font-size="19" fill="#333" class="body">✗ No grasp of <tspan font-weight="bold">meaning, intent, or context</tspan></text>
+
+      <rect x="0" y="174" width="540" height="46" rx="6" fill="#fdeaea" stroke="#c0392b" stroke-width="2"/>
+      <text x="20" y="204" font-size="19" fill="#333" class="body">✗ Cannot <tspan font-weight="bold">summarize or synthesize</tspan></text>
+    </g>
+
+    <!-- Pink sticky -->
+    <rect x="120" y="445" width="340" height="36" rx="3" fill="#f7c6c8" stroke="#c0392b" stroke-width="2"/>
+    <text x="290" y="470" text-anchor="middle" font-size="19" font-weight="bold" fill="#c0392b" class="body">It finds words, not knowledge.</text>
+  </g>
+
+  <defs>
+    <marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+    <marker id="a4b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <!-- BOTTOM TAKEAWAY -->
+  <g transform="translate(100, 800)">
+    <rect x="0" y="0" width="1400" height="60" rx="4" fill="none" stroke="#5a8bbc" stroke-width="3"/>
+    <polygon points="42,15 48,28 62,29 51,38 55,52 42,44 29,52 33,38 22,29 36,28" fill="#f4c430" stroke="#b8860b" stroke-width="1.5"/>
+    <line x1="-15" y1="20" x2="-5" y2="20" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="-20" y1="35" x2="-8" y2="35" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="-15" y1="50" x2="-5" y2="50" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="1405" y1="20" x2="1415" y2="20" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="1410" y1="35" x2="1420" y2="35" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="1405" y1="50" x2="1415" y2="50" stroke="#5a8bbc" stroke-width="2"/>
+    <rect x="778" y="22" width="282" height="24" fill="#fff2a8" opacity="0.85"/>
+    <text x="130" y="40" font-size="25" fill="#333" class="body">The next step isn't a better search box —</text>
+    <text x="782" y="40" font-size="25" font-weight="bold" fill="#333" class="body">it's understanding.</text>
+  </g>
+
+  <g transform="translate(1480, 855)">
+    <rect x="0" y="0" width="32" height="32" rx="3" fill="none" stroke="#333" stroke-width="2"/>
+    <text x="16" y="23" text-anchor="middle" font-size="18" font-weight="bold" fill="#333" class="body">4</text>
+    <text x="60" y="24" text-anchor="middle" font-size="16" fill="#666" class="body">Slide 4</text>
+  </g>
+</svg>

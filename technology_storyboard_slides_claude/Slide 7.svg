@@ -1,0 +1,163 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css"><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;family=Kalam:wght@400;700&amp;display=swap');
+      .title { font-family: 'Caveat', 'Comic Sans MS', cursive; font-weight: 700; }
+      .body  { font-family: 'Kalam', 'Comic Sans MS', cursive; }
+    ]]></style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#f7f5ef"/>
+
+  <text x="800" y="80" font-size="56" text-anchor="middle" fill="#1a1a1a" class="title">The Expertise This Requires</text>
+  <path d="M 460 97 Q 800 111 1140 95" stroke="#7fb8e6" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <text x="500" y="143" font-size="27" fill="#333" class="body">The vision is here. These are the</text>
+  <rect x="893" y="122" width="290" height="26" fill="#fff2a8" opacity="0.75"/>
+  <text x="897" y="143" font-size="27" font-weight="bold" fill="#333" class="body">specialists who validate it.</text>
+  <path d="M 500 152 L 1190 152" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- 6 role cards in 2x3 grid (left of right-side note) -->
+  <!-- Card template helper: 320 wide, 230 tall -->
+
+  <!-- Row 1 -->
+  <!-- Data Architect -->
+  <g transform="translate(70, 185)">
+    <rect x="0" y="0" width="340" height="225" rx="14" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <circle cx="55" cy="55" r="28" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <path d="M 27 55 Q 55 25 83 55 L 79 45 Q 55 20 31 45 Z" fill="#f4c430" stroke="#333" stroke-width="2"/>
+    <circle cx="46" cy="58" r="3" fill="#333"/>
+    <circle cx="64" cy="58" r="3" fill="#333"/>
+    <path d="M 46 70 Q 55 76 64 70" stroke="#333" stroke-width="1.8" fill="none"/>
+    <rect x="100" y="35" width="200" height="34" fill="#fde9b8"/>
+    <text x="200" y="59" text-anchor="middle" font-size="20" font-weight="bold" fill="#9a6a1a" class="body">DATA ARCHITECT</text>
+    <text x="25" y="115" font-size="17" fill="#333" class="body">Designs how documents are</text>
+    <text x="25" y="140" font-size="17" fill="#333" class="body">stored, linked, and indexed</text>
+    <text x="25" y="165" font-size="17" fill="#333" class="body">to scale across the archive.</text>
+    <rect x="25" y="182" width="290" height="3" fill="#fde9b8"/>
+  </g>
+
+  <!-- Data Engineer -->
+  <g transform="translate(430, 185)">
+    <rect x="0" y="0" width="340" height="225" rx="14" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <circle cx="55" cy="55" r="28" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <path d="M 27 55 Q 55 25 83 55 L 79 45 Q 55 20 31 45 Z" fill="#5a8bbc" stroke="#333" stroke-width="2"/>
+    <circle cx="46" cy="58" r="3" fill="#333"/>
+    <circle cx="64" cy="58" r="3" fill="#333"/>
+    <path d="M 46 70 Q 55 76 64 70" stroke="#333" stroke-width="1.8" fill="none"/>
+    <rect x="100" y="35" width="200" height="34" fill="#cde0f0"/>
+    <text x="200" y="59" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a4a72" class="body">DATA ENGINEER</text>
+    <text x="25" y="115" font-size="17" fill="#333" class="body">Builds the pipelines that</text>
+    <text x="25" y="140" font-size="17" fill="#333" class="body">extract, clean, and process</text>
+    <text x="25" y="165" font-size="17" fill="#333" class="body">messy PDFs and files.</text>
+    <rect x="25" y="182" width="290" height="3" fill="#cde0f0"/>
+  </g>
+
+  <!-- AI / ML Engineer -->
+  <g transform="translate(790, 185)">
+    <rect x="0" y="0" width="340" height="225" rx="14" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <circle cx="55" cy="58" r="28" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <ellipse cx="55" cy="32" rx="18" ry="11" fill="#f5c6d4" stroke="#333" stroke-width="2"/>
+    <path d="M 43 32 Q 55 24 67 32" stroke="#333" stroke-width="1.2" fill="none"/>
+    <circle cx="46" cy="60" r="3" fill="#333"/>
+    <circle cx="64" cy="60" r="3" fill="#333"/>
+    <path d="M 46 72 Q 55 78 64 72" stroke="#333" stroke-width="1.8" fill="none"/>
+    <rect x="100" y="38" width="210" height="34" fill="#f5dde6"/>
+    <text x="205" y="62" text-anchor="middle" font-size="19" font-weight="bold" fill="#9a4a6a" class="body">AI / ML ENGINEER</text>
+    <text x="25" y="115" font-size="17" fill="#333" class="body">Selects models, designs</text>
+    <text x="25" y="140" font-size="17" fill="#333" class="body">embeddings &amp; retrieval,</text>
+    <text x="25" y="165" font-size="17" fill="#333" class="body">tunes for accuracy.</text>
+    <rect x="25" y="182" width="290" height="3" fill="#f5dde6"/>
+  </g>
+
+  <!-- Row 2 -->
+  <!-- Records / Domain Expert -->
+  <g transform="translate(70, 430)">
+    <rect x="0" y="0" width="340" height="225" rx="14" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <circle cx="55" cy="55" r="28" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <circle cx="46" cy="55" r="7" fill="none" stroke="#333" stroke-width="2"/>
+    <circle cx="64" cy="55" r="7" fill="none" stroke="#333" stroke-width="2"/>
+    <line x1="53" y1="55" x2="57" y2="55" stroke="#333" stroke-width="1.5"/>
+    <circle cx="46" cy="55" r="2" fill="#333"/>
+    <circle cx="64" cy="55" r="2" fill="#333"/>
+    <path d="M 46 70 Q 55 76 64 70" stroke="#333" stroke-width="1.8" fill="none"/>
+    <rect x="95" y="35" width="235" height="34" fill="#fde9b8"/>
+    <text x="212" y="58" text-anchor="middle" font-size="15" font-weight="bold" fill="#9a6a1a" class="body">RECORDS / DOMAIN EXPERT</text>
+    <text x="25" y="115" font-size="17" fill="#333" class="body">Knows how municipal records</text>
+    <text x="25" y="140" font-size="17" fill="#333" class="body">are produced, classified,</text>
+    <text x="25" y="165" font-size="17" fill="#333" class="body">and actually used.</text>
+    <rect x="25" y="182" width="290" height="3" fill="#fde9b8"/>
+  </g>
+
+  <!-- Security & Governance -->
+  <g transform="translate(430, 430)">
+    <rect x="0" y="0" width="340" height="225" rx="14" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <circle cx="55" cy="55" r="28" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <path d="M 40 38 L 70 38 L 70 58 Q 70 70 55 76 Q 40 70 40 58 Z" fill="#d4eed4" stroke="#2a8c4a" stroke-width="2"/>
+    <path d="M 47 55 L 53 61 L 64 47" stroke="#2a8c4a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <rect x="95" y="35" width="240" height="34" fill="#d4eed4"/>
+    <text x="215" y="58" text-anchor="middle" font-size="15" font-weight="bold" fill="#2a6b3a" class="body">SECURITY &amp; GOVERNANCE</text>
+    <text x="25" y="115" font-size="17" fill="#333" class="body">Ensures privacy, audit trails,</text>
+    <text x="25" y="140" font-size="17" fill="#333" class="body">and compliance with</text>
+    <text x="25" y="165" font-size="17" fill="#333" class="body">public-records law.</text>
+    <rect x="25" y="182" width="290" height="3" fill="#d4eed4"/>
+  </g>
+
+  <!-- UX / Civic Designer -->
+  <g transform="translate(790, 430)">
+    <rect x="0" y="0" width="340" height="225" rx="14" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <circle cx="55" cy="55" r="28" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <path d="M 30 50 Q 28 28 55 27 Q 82 28 80 50 Q 74 40 66 42 Q 56 35 55 38 Q 46 35 44 42 Q 36 40 30 50" fill="#a98b6a" stroke="#333" stroke-width="2"/>
+    <circle cx="46" cy="57" r="3" fill="#333"/>
+    <circle cx="64" cy="57" r="3" fill="#333"/>
+    <path d="M 46 70 Q 55 76 64 70" stroke="#333" stroke-width="1.8" fill="none"/>
+    <rect x="100" y="35" width="225" height="34" fill="#f7d4b8"/>
+    <text x="212" y="59" text-anchor="middle" font-size="18" font-weight="bold" fill="#9a5a2a" class="body">UX / CIVIC DESIGNER</text>
+    <text x="25" y="115" font-size="17" fill="#333" class="body">Makes the system usable for</text>
+    <text x="25" y="140" font-size="17" fill="#333" class="body">non-technical citizens, staff,</text>
+    <text x="25" y="165" font-size="17" fill="#333" class="body">and council members.</text>
+    <rect x="25" y="182" width="290" height="3" fill="#f7d4b8"/>
+  </g>
+
+  <!-- Right-side dashed callout -->
+  <g transform="translate(1165, 200)">
+    <rect x="0" y="0" width="370" height="450" rx="8" fill="#fffaf0" stroke="#666" stroke-width="2.5" stroke-dasharray="7,5"/>
+    <text x="185" y="50" text-anchor="middle" font-size="26" fill="#1a4a72" class="title">Why this matters</text>
+    <line x1="45" y1="62" x2="325" y2="62" stroke="#7fb8e6" stroke-width="3"/>
+
+    <text x="185" y="105" text-anchor="middle" font-size="19" fill="#333" class="body">No single hire builds</text>
+    <text x="185" y="130" text-anchor="middle" font-size="19" fill="#333" class="body">a system like this.</text>
+
+    <text x="185" y="185" text-anchor="middle" font-size="19" fill="#333" class="body">First-round funding buys</text>
+    <text x="185" y="210" text-anchor="middle" font-size="19" fill="#333" class="body">access to the right</text>
+    <text x="185" y="235" text-anchor="middle" font-size="19" fill="#333" class="body">specialists at the</text>
+    <text x="185" y="260" text-anchor="middle" font-size="19" fill="#333" class="body">right depth.</text>
+
+    <rect x="35" y="295" width="300" height="56" fill="#fdeaea"/>
+    <text x="185" y="318" text-anchor="middle" font-size="18" fill="#c0392b" class="body">Wrong architecture =</text>
+    <text x="185" y="342" text-anchor="middle" font-size="18" fill="#c0392b" class="body">an expensive rebuild later.</text>
+
+    <text x="185" y="400" text-anchor="middle" font-size="28" fill="#2a6b3a" class="title">Get it right once.</text>
+    <line x1="80" y1="412" x2="290" y2="412" stroke="#2a8c4a" stroke-width="2.5"/>
+  </g>
+
+  <!-- BOTTOM TAKEAWAY -->
+  <g transform="translate(100, 745)">
+    <rect x="0" y="0" width="1400" height="58" rx="4" fill="none" stroke="#5a8bbc" stroke-width="3"/>
+    <polygon points="41,14 47,27 60,28 50,37 54,50 41,43 28,50 32,37 22,28 35,27" fill="#f4c430" stroke="#b8860b" stroke-width="1.5"/>
+    <line x1="-15" y1="18" x2="-5" y2="18" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="-20" y1="33" x2="-8" y2="33" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="-15" y1="48" x2="-5" y2="48" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="1405" y1="18" x2="1415" y2="18" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="1410" y1="33" x2="1420" y2="33" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="1405" y1="48" x2="1415" y2="48" stroke="#5a8bbc" stroke-width="2"/>
+    <rect x="130" y="20" width="335" height="22" fill="#fff2a8" opacity="0.85"/>
+    <text x="134" y="38" font-size="24" font-weight="bold" fill="#333" class="body">Six kinds of expertise —</text>
+    <text x="490" y="38" font-size="24" fill="#333" class="body">one coordinated feasibility effort.</text>
+  </g>
+
+  <g transform="translate(1480, 855)">
+    <rect x="0" y="0" width="32" height="32" rx="3" fill="none" stroke="#333" stroke-width="2"/>
+    <text x="16" y="23" text-anchor="middle" font-size="18" font-weight="bold" fill="#333" class="body">7</text>
+    <text x="60" y="24" text-anchor="middle" font-size="16" fill="#666" class="body">Slide 7</text>
+  </g>
+</svg>

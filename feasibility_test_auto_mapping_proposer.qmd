@@ -1,0 +1,275 @@
+---
+title: "Feasibility Test: The Auto-Mapping Proposer"
+subtitle: "Civic Data Access · the experiment that de-risks the company"
+author: "Strategy / project-management working document"
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    embed-resources: true
+---
+
+# Why this document exists
+
+This is written for the **project-manager** seat, not the data-scientist
+seat. The data-science work is real, but the thing that has to be
+understood and completed *before any demo* is the design and result of
+**one experiment**:
+
+> **On a realistic decade of messy municipal spreadsheets, how far can an
+> automated mapping proposer get before a human is required — and can
+> that human be a non-engineer?**
+
+Everything else (the chatbot, the charts, the retrieval) is
+demonstrable and, frankly, not where the company's risk lives. The
+proposer is. If it works, Model B is a software company. If it doesn't,
+Model B is a consulting practice wearing a software costume. This
+document defines how to find out, on purpose, before spending money on
+polish.
+
+The project manager's job is **not** to build the proposer. It is to
+make sure this experiment is run honestly, scoped tightly, and judged
+against numbers agreed *in advance* — not numbers rationalized
+afterward.
+
+---
+
+# The one sentence the whole company rests on
+
+> The engine is generic and shipped identically to everyone.
+> The per-jurisdiction *mapping* is bespoke and unavoidable.
+> The company is viable **only if the labor of producing that mapping
+> can be mostly automated**, with the remainder completable by a
+> non-engineer using review tooling.
+
+The experiment measures exactly that "mostly" and that "remainder."
+
+---
+
+# What the proposer is (so the test target is unambiguous)
+
+The proposer is software that ingests a pile of a jurisdiction's source
+spreadsheets and **emits a draft mapping configuration** — a structured
+file (not code) that the generic engine will later consume. A human then
+**reviews and corrects** that draft.
+
+The draft mapping must make decisions in roughly these categories:
+
+1. **Field identification** — which column is a fiscal year, which is a
+   dollar amount, which is a headcount, which is a label/category, which
+   is noise.
+2. **Entity canonicalization** — "Police", "PD", "Police Dept",
+   "Public Safety – Police" all resolve to one canonical entity.
+3. **Schema-era detection** — recognizing that 2008–2014 files use one
+   layout, 2015–2019 another, 2020+ another, and bounding those eras.
+4. **Authority/version resolution** — which sheet/tab/file is the
+   published-source-of-truth vs. a scratch or superseded copy.
+5. **Cross-year linkage** — asserting that this line item in year *N* is
+   the continuation of that line item in year *N−1* despite renaming,
+   splitting, or merging.
+
+The test does **not** measure whether the chatbot is impressive. It
+measures the **correctness of these five decision types** against a
+known-correct answer.
+
+---
+
+# The proving ground: the TEA corpus
+
+The 29 years of Texas Education Agency data already normalized by hand
+is not just credibility for a pitch. It is the single most valuable
+asset available for this experiment, because it is a **decade-plus of
+real, messy, institutional spreadsheet drift for which a
+human-verified, correct normalization already exists.**
+
+That means it can serve as **ground truth**. The proposer's draft can be
+scored against the known-correct hand mapping objectively, rather than
+judged by impression. Almost nobody attempting this category of company
+has a labeled ground-truth corpus of this depth. It should be the first
+proving ground precisely because the answer key already exists.
+
+**Project-manager actions for the corpus:**
+
+- Freeze a copy of the *raw, pre-normalization* TEA source files
+  (the inputs as originally received, untouched).
+- Freeze the *hand-produced normalized result + the mapping decisions*
+  that produced it (the answer key).
+- Confirm the answer key can be expressed in the proposer's config
+  schema (if it can't, the schema is wrong — that itself is a finding).
+- **Quarantine** the answer key from anyone tuning the proposer, so the
+  test is not contaminated by teaching-to-the-answer.
+
+---
+
+# Test design
+
+## Datasets (run against three, not one)
+
+A single corpus proves nothing about generalization. Use three tiers:
+
+1. **TEA corpus (primary, has ground truth).**
+   Full objective scoring possible. This is the spine of the
+   experiment.
+
+2. **One non-TEA municipal corpus (generalization check).**
+   A city or district budget archive, ~8–12 years, *without* a
+   pre-existing answer key. Here a human normalizes it once *after*
+   the proposer runs, recording how much was kept vs. corrected. Tests
+   whether the proposer generalizes beyond the domain its designer
+   knows best.
+
+3. **One deliberately hostile corpus (failure-mode probe).**
+   The worst real archive obtainable — mixed formats, reorganized
+   departments, missing years, manual overrides. Not scored for a
+   passing grade; run to *characterize how it fails* (does it fail
+   loudly and flag uncertainty, or fail silently and assert wrong
+   answers confidently?). Silent confident failure is disqualifying;
+   loud flagged uncertainty is acceptable.
+
+## The protocol
+
+1. Freeze raw inputs and (where available) the answer key.
+2. Run the proposer cold — no per-corpus hand-tuning.
+3. Capture the draft mapping it emits.
+4. Score the draft against ground truth (TEA) or against a
+   post-hoc human normalization (others).
+5. Have a **non-engineer** (a finance/records-analyst profile, not a
+   developer) attempt to complete/correct the draft using only the
+   review tooling. Time it. Record where they get stuck.
+6. Record every place a human *had* to intervene and classify the
+   intervention as *mechanical* (a non-engineer can do it) vs.
+   *institutional judgment* (requires deep domain sense).
+
+Step 6 is the heart of the experiment. The split between "mechanical"
+and "institutional-judgment" interventions is the actual result the
+company lives or dies on.
+
+---
+
+# What "good enough" means — numerically, agreed in advance
+
+These thresholds are written down *before* the test so the result
+cannot be rationalized afterward. They are deliberately conservative;
+adjust the exact figures with the team, but adopt *some* fixed number
+before running, not after.
+
+## Primary metric — Draft Acceptance Rate (DAR)
+
+Of all mapping decisions the proposer emits, the fraction a human
+verifies as correct **without modification**.
+
+| DAR (TEA, cold) | Interpretation |
+|---|---|
+| **≥ 80%** | Strong. The labor is productizable. Model B is a software company. Proceed. |
+| **65–79%** | Promising but unproven. The remaining 20–35% must be shown completable by a *non-engineer* (see secondary metric) before proceeding. |
+| **50–64%** | Caution. Likely a configurable-template business, not a turnkey one. Re-scope expectations and pricing before any build. |
+| **< 50%** | The proposer does not de-risk the labor. Model B as "install and step back" is not yet real. Stop and rethink before spending on demo polish. |
+
+## Secondary metric — Non-Engineer Completion (NEC)
+
+Of the decisions the proposer got wrong or left uncertain, the fraction
+a **non-engineer** can correctly resolve using only the review tooling,
+within a bounded time budget.
+
+- **Target: ≥ 90% of the remainder resolvable by a non-engineer.**
+- The ≤10% that genuinely requires deep institutional judgment defines
+  the *irreducible* onboarding cost — that is acceptable and expected;
+  it just must be small, bounded, and *not require an engineer or the
+  founder personally.*
+
+> The company-defining question is **not** "is DAR 100%?" (it never will
+> be). It is "is the *non-DAR remainder* completable by a non-engineer
+> in bounded time?" A 70% DAR with 95% NEC is a better business than a
+> 85% DAR whose remainder needs a data scientist.
+
+## Tertiary metric — Failure Honesty
+
+On the hostile corpus: of the decisions the proposer got wrong, the
+fraction it **flagged as low-confidence** rather than asserting
+confidently.
+
+- **Target: ≥ 95% of errors self-flagged.**
+- A confidently-wrong number with a citation is worse than no answer.
+  Loud uncertainty is a feature; silent confident error is
+  disqualifying regardless of DAR.
+
+## Efficiency metric — Time-to-First-Trustworthy-Config
+
+Wall-clock time for the non-engineer to take a corpus from raw files to
+a config they would stand behind.
+
+- This is the number that becomes the **onboarding cost** in the
+  business model and the pricing. It is not pass/fail; it is the input
+  that tells you whether onboarding is a bounded setup fee or an
+  open-ended engagement. Capture it precisely; it feeds the financial
+  model directly.
+
+---
+
+# The decision the experiment forces
+
+The experiment exists to produce **one of four explicit verdicts**, each
+with a predetermined next action. Deciding the actions now prevents
+motivated reasoning later.
+
+| Verdict | Condition | Predetermined next action |
+|---|---|---|
+| **Green** | DAR ≥ 80% **and** NEC ≥ 90% **and** Failure Honesty ≥ 95% | Model B confirmed. Proceed to engine + demo build. The proposer is the moat; resource it accordingly. |
+| **Yellow-Template** | DAR 50–79% but NEC ≥ 90% | Viable as a *template-driven* business. The domain-template library is the real product. Re-scope, re-price, then proceed. |
+| **Yellow-Watch** | DAR ≥ 65% but NEC < 90% | The remainder needs expert judgment. Either invest specifically in raising NEC, or accept a higher-touch onboarding model and price it honestly. Do **not** demo as turnkey. |
+| **Red** | DAR < 50% **or** Failure Honesty < 90% | "Install and step back" is not real yet. Do not spend on demo polish. Return to the proposer design, or reconsider whether the business is Model A after all. |
+
+The project-manager deliverable is **not a working product**. It is a
+signed-off verdict from this table, with the numbers attached.
+
+---
+
+# Why this must precede any demo
+
+A demo proves the *engine* — the chatbot, the chart, the sourced
+answer. The engine is the easy, fun, fundable-looking part, and it is
+**not where the risk is.** A polished demo built before this experiment
+runs is a demo that hides the only question that matters. Funders
+sophisticated enough to write the check will probe the normalization
+labor; an honest, numeric answer to this experiment is a stronger asset
+in that room than a slick chatbot that quietly assumes the hard part
+away.
+
+Run the experiment. Get the verdict. *Then* decide what to demo.
+
+---
+
+# Project-manager checklist (sequenced)
+
+1. Freeze raw TEA inputs and the hand-normalized answer key; quarantine
+   the key.
+2. Confirm the answer key is expressible in the proposer's config
+   schema (failure here is itself an early finding).
+3. Acquire one non-TEA municipal corpus and one hostile corpus.
+4. Agree the four metric thresholds **in writing** before any run.
+5. Recruit a genuine non-engineer (finance/records-analyst profile) for
+   the NEC test — not a developer, not the founder.
+6. Run the proposer cold against all three corpora.
+7. Score DAR, NEC, Failure Honesty, Time-to-First-Trustworthy-Config.
+8. Classify every human intervention as mechanical vs.
+   institutional-judgment.
+9. Map results to the verdict table; record the verdict and the numbers.
+10. Only after a Green or re-scoped Yellow verdict: begin engine/demo
+    build.
+
+---
+
+# The one risk this document is built to prevent
+
+The natural failure mode of a technically strong founder is to build
+the satisfying part (the engine, the demo) and let it quietly stand in
+for proof of the unsatisfying part (the normalization labor). This
+document exists to keep that substitution from happening by accident.
+The proposer experiment is the company's actual de-risking event.
+Everything else is downstream of its verdict.
+
+
+One observation worth leaving you with, since you've now produced three strategy documents in a row: the through-line in all of them is the same single discipline — prove the company before you polish it, and let the verdict, not enthusiasm, authorize the next dollar. You keep arriving at that principle from different directions (the Model A/B fork, the demo-vs-proposer question, now the hiring question). That repetition is a good sign — it means the framework is stable, not that you're going in circles. The next time you feel the pull to build or hire the satisfying thing first, these three documents are the counterweight you wrote to yourself.

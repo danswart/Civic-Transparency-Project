@@ -1,0 +1,108 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css"><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;family=Kalam:wght@400;700&amp;display=swap');
+      .title { font-family: 'Caveat', 'Comic Sans MS', cursive; font-weight: 700; }
+      .body  { font-family: 'Kalam', 'Comic Sans MS', cursive; }
+    ]]></style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#f7f5ef"/>
+
+  <text x="800" y="80" font-size="56" text-anchor="middle" fill="#1a1a1a" class="title">What First-Round Funding Buys</text>
+  <path d="M 430 97 Q 800 111 1170 95" stroke="#7fb8e6" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <text x="430" y="143" font-size="27" fill="#333" class="body">Not a finished product — the</text>
+  <rect x="876" y="122" width="370" height="26" fill="#fff2a8" opacity="0.75"/>
+  <text x="880" y="143" font-size="27" font-weight="bold" fill="#333" class="body">foundation needed to build one.</text>
+  <path d="M 430 152 L 1248 152" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Center coin -->
+  <g transform="translate(730, 400)">
+    <circle cx="70" cy="70" r="58" fill="#f4c430" stroke="#b8860b" stroke-width="4"/>
+    <circle cx="70" cy="70" r="48" fill="none" stroke="#b8860b" stroke-width="2"/>
+    <text x="70" y="92" text-anchor="middle" font-size="58" font-weight="bold" fill="#9a6a1a" class="body">$</text>
+    <text x="70" y="160" text-anchor="middle" font-size="22" font-weight="bold" fill="#333" class="body">ROUND 1</text>
+  </g>
+
+  <!-- Deliverable 1 top-left -->
+  <g transform="translate(90, 195)">
+    <rect x="0" y="0" width="370" height="180" rx="14" fill="#fff" stroke="#5a8bbc" stroke-width="3"/>
+    <circle cx="40" cy="40" r="24" fill="#5a8bbc"/>
+    <text x="40" y="49" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff" class="body">1</text>
+    <text x="78" y="48" font-size="22" font-weight="bold" fill="#1a4a72" class="body">Hire the experts</text>
+    <line x1="22" y1="65" x2="348" y2="65" stroke="#cde0f0" stroke-width="2.5"/>
+    <text x="22" y="95" font-size="17" fill="#333" class="body">Purchase or contract the specialist</text>
+    <text x="22" y="120" font-size="17" fill="#333" class="body">expertise needed to design a</text>
+    <text x="22" y="145" font-size="17" fill="#333" class="body">scalable system architecture.</text>
+  </g>
+
+  <!-- Deliverable 2 top-right -->
+  <g transform="translate(1140, 195)">
+    <rect x="0" y="0" width="370" height="180" rx="14" fill="#fff" stroke="#2a8c4a" stroke-width="3"/>
+    <circle cx="40" cy="40" r="24" fill="#2a8c4a"/>
+    <text x="40" y="49" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff" class="body">2</text>
+    <text x="78" y="48" font-size="22" font-weight="bold" fill="#2a6b3a" class="body">Test feasibility</text>
+    <line x1="22" y1="65" x2="348" y2="65" stroke="#d4eed4" stroke-width="2.5"/>
+    <text x="22" y="95" font-size="17" fill="#333" class="body">Evaluate whether an enterprise-</text>
+    <text x="22" y="120" font-size="17" fill="#333" class="body">grade municipal transparency</text>
+    <text x="22" y="145" font-size="17" fill="#333" class="body">platform is technically achievable.</text>
+  </g>
+
+  <!-- Deliverable 3 bottom-left -->
+  <g transform="translate(90, 525)">
+    <rect x="0" y="0" width="370" height="180" rx="14" fill="#fff" stroke="#b8860b" stroke-width="3"/>
+    <circle cx="40" cy="40" r="24" fill="#b8860b"/>
+    <text x="40" y="49" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff" class="body">3</text>
+    <text x="78" y="48" font-size="22" font-weight="bold" fill="#9a6a1a" class="body">Build the budget</text>
+    <line x1="22" y1="65" x2="348" y2="65" stroke="#fde9b8" stroke-width="2.5"/>
+    <text x="22" y="95" font-size="17" fill="#333" class="body">Develop a realistic, defensible</text>
+    <text x="22" y="120" font-size="17" fill="#333" class="body">feasibility budget grounded in</text>
+    <text x="22" y="145" font-size="17" fill="#333" class="body">actual technical scope.</text>
+  </g>
+
+  <!-- Deliverable 4 bottom-right -->
+  <g transform="translate(1140, 525)">
+    <rect x="0" y="0" width="370" height="180" rx="14" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+    <circle cx="40" cy="40" r="24" fill="#c0392b"/>
+    <text x="40" y="49" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff" class="body">4</text>
+    <text x="78" y="48" font-size="22" font-weight="bold" fill="#c0392b" class="body">Define the roadmap</text>
+    <line x1="22" y1="65" x2="348" y2="65" stroke="#fdeaea" stroke-width="2.5"/>
+    <text x="22" y="95" font-size="17" fill="#333" class="body">Determine the technical, operational</text>
+    <text x="22" y="120" font-size="17" fill="#333" class="body">&amp; financial requirements to move</text>
+    <text x="22" y="145" font-size="17" fill="#333" class="body">beyond the prototype stage.</text>
+  </g>
+
+  <!-- Connectors from coin -->
+  <path d="M 730 430 Q 600 410 462 320" stroke="#999" stroke-width="2.5" fill="none" stroke-dasharray="6,5"/>
+  <path d="M 870 430 Q 1010 410 1138 320" stroke="#999" stroke-width="2.5" fill="none" stroke-dasharray="6,5"/>
+  <path d="M 730 510 Q 590 560 462 610" stroke="#999" stroke-width="2.5" fill="none" stroke-dasharray="6,5"/>
+  <path d="M 870 510 Q 1020 560 1138 610" stroke="#999" stroke-width="2.5" fill="none" stroke-dasharray="6,5"/>
+
+  <!-- Center small callout -->
+  <g transform="translate(575, 580)">
+    <rect x="0" y="0" width="450" height="78" rx="10" fill="#fffaf0" stroke="#666" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="225" y="33" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a4a72" class="body">Output: a validated, fundable plan</text>
+    <text x="225" y="60" text-anchor="middle" font-size="17" fill="#555" class="body">for a second-round pilot deployment</text>
+  </g>
+
+  <!-- BOTTOM TAKEAWAY -->
+  <g transform="translate(100, 760)">
+    <rect x="0" y="0" width="1400" height="58" rx="4" fill="none" stroke="#5a8bbc" stroke-width="3"/>
+    <polygon points="41,14 47,27 60,28 50,37 54,50 41,43 28,50 32,37 22,28 35,27" fill="#f4c430" stroke="#b8860b" stroke-width="1.5"/>
+    <line x1="-15" y1="18" x2="-5" y2="18" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="-20" y1="33" x2="-8" y2="33" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="-15" y1="48" x2="-5" y2="48" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="1405" y1="18" x2="1415" y2="18" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="1410" y1="33" x2="1420" y2="33" stroke="#5a8bbc" stroke-width="2"/>
+    <line x1="1405" y1="48" x2="1415" y2="48" stroke="#5a8bbc" stroke-width="2"/>
+    <rect x="130" y="20" width="370" height="22" fill="#fff2a8" opacity="0.85"/>
+    <text x="134" y="38" font-size="24" font-weight="bold" fill="#333" class="body">Four concrete deliverables —</text>
+    <text x="520" y="38" font-size="24" fill="#333" class="body">each one a checkable result.</text>
+  </g>
+
+  <g transform="translate(1480, 855)">
+    <rect x="0" y="0" width="32" height="32" rx="3" fill="none" stroke="#333" stroke-width="2"/>
+    <text x="16" y="23" text-anchor="middle" font-size="18" font-weight="bold" fill="#333" class="body">9</text>
+    <text x="60" y="24" text-anchor="middle" font-size="16" fill="#666" class="body">Slide 9</text>
+  </g>
+</svg>

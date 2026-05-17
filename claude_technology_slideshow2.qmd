@@ -1,0 +1,157 @@
+---
+title: "The Municipal Transparency Gap"
+subtitle: "A First-Round Funding Proposal for a Civic AI Knowledge System"
+format:
+  revealjs:
+    embed-resources: true
+    slide-number: false
+    controls: true
+    progress: true
+    transition: none
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: slide-1
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 1.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-2
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 2.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-3
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 3.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-4
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 4.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-5
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 5.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-6
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 6.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-7
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 7.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-8
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 8.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-9
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 9.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-10
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 10.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-11
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 11.png")
+
+```
+
+---
+
+```{r}
+#| label: slide-12
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+
+knitr::include_graphics("technology_storyboard_slides_claude/Slide 12.png")
+
+```

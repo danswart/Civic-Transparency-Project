@@ -1,0 +1,194 @@
+---
+title: "Askable — The Internal-Relief Pitch"
+subtitle: "Civic Data Access · Model B (the jurisdiction keeps custody)"
+author: "Working strategy document"
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    embed-resources: true
+---
+
+# How to read this document
+
+This is not a marketing brochure. It is a thinking tool — written to be
+read and re-read until the reframe is automatic.
+
+The single idea to internalize:
+
+> **The institution is not buying transparency. It is buying relief from
+> its own pain. The citizen benefit is a side effect we mention second —
+> never the argument.**
+
+If at any point a draft, a slide, or a sentence starts selling *civic
+virtue* to the buyer, it has drifted back to the pitch that fails in the
+room. Come back here.
+
+---
+
+# The wedge, in two paragraphs (the version that must hold up)
+
+*(This is the test. If these two paragraphs feel true without the words
+"transparency" or "citizen" doing the persuading, the wedge is real.)*
+
+You already have the data. Every budget figure, every staffing number,
+every reported total began life in an Excel file on your finance
+server — long before it became a PDF on the website. The problem isn't
+that the information is missing. The problem is that **your own people
+can't get answers out of it either.** A council member asks what changed
+in a budget line over five years and it takes a staffer half a day. A
+records request comes in and someone re-derives an answer the documents
+already contain. Institutional memory walks out the door with every
+departure.
+
+**Askable** installs against the source files **you already hold** and
+makes them answerable in plain language — first for *your* staff. "What
+did we budget for this line in each of the last six years?" returns a
+sourced answer, with the file and figure it came from, in seconds
+instead of an afternoon. It runs on your data, on your terms, in your
+environment. We set it up and step back; custody never leaves your
+office. The fact that residents can then self-serve the routine
+questions — and stop calling your staff to ask them — is a benefit you
+get for free. It is not the reason to do this. The reason to do this is
+that **your own team gets its time back.**
+
+---
+
+# Who actually feels the pain (the real buyer)
+
+Not the transparency advocate. That person doesn't exist inside the
+building, and selling to them is the pitch that fails. The buyer is
+whoever is **exhausted by their own inaccessible records**:
+
+- **The clerk** drowning in records requests that the documents could
+  answer without human labor.
+- **The new council member** who cannot get a straight, fast answer
+  about what was decided before they arrived.
+- **The finance director** who can't quickly reconstruct a budget
+  line's history when the manager asks "why is this up?"
+- **The line staffer** who loses a day answering a question the record
+  already contains.
+- **The administrator** watching institutional knowledge leave with
+  every retirement and resignation.
+
+None of these people care about the mission. **All of them want their
+afternoon back.** That want is the entire market.
+
+---
+
+# Why this is Model B (and why that matters to the buyer)
+
+Model B is not a deployment detail. It is the reason a defensive,
+information-averse institution can still say yes.
+
+| | What it means | Why the buyer cares |
+|---|---|---|
+| **Their data, their custody** | Askable runs against the source files the jurisdiction already holds. Nothing is extracted, published, or sent out. | No new exposure. No "are we releasing more than we must?" objection. |
+| **No FOIA, internally** | Inside the building it is their own file on their own drive. FOIA is irrelevant to the customer. | The thing they're defensive about (outside extraction) simply isn't what's happening. |
+| **Install and step back** | We stand it up against their environment; ongoing custody, storage, and control stay with them. | No dependency on a vendor holding their data forever. No treadmill they're signing up for. |
+| **Internal-first value** | The first visible result is *their staff* answering questions faster. | The benefit lands on the person who signs, not on an abstract public. |
+
+The honest line for the room:
+
+> "You're not exposing anything. You're not sending us your data. You're
+> not doing extra work for the public. You're pointing a tool at files
+> you already have so your own people stop spending afternoons on
+> questions the documents can already answer."
+
+---
+
+# The pitch, sequenced (say it in this order — order is the strategy)
+
+1. **Name their pain, not our mission.**
+   "Your staff spends real time answering questions your own documents
+   already contain. Records requests, council questions, budget history
+   — re-derived by hand, over and over."
+
+2. **Locate the cause without blame.**
+   "It's not a staffing problem. The data exists — it just isn't
+   answerable. Everything starts in Excel and ends in a PDF, and the PDF
+   can't be questioned."
+
+3. **Offer the relief, on their terms.**
+   "Askable installs against the source files you already hold and makes
+   them answerable in plain English — for your team first. Your data
+   stays with you. We set it up and step back."
+
+4. **Mention the public benefit second, as deflection, not virtue.**
+   "And because the routine questions become self-serve, residents stop
+   calling your staff to ask them. Fewer repetitive requests is a side
+   effect — a welcome one."
+
+5. **Stop.** Do not argue democracy. The room already said yes for its
+   own reasons. The mission was served through the back door.
+
+---
+
+# Words to keep out of the buyer conversation
+
+These belong in the investor deck and the public-facing story — **not**
+in the sentence that asks an administrator to sign:
+
+- "Transparency"
+- "Accountability"
+- "The public's right to know"
+- "Hold officials accountable"
+- "Watchdog"
+
+Each one reframes the tool as the citizen's *weapon* — exactly the lens
+that makes a defensive institution balk. The relief pitch never needs
+them, and is stronger without them.
+
+---
+
+# The honest limits (so the reframe doesn't curdle into overconfidence)
+
+- **The most defensive ~20–30% still won't buy.** A tool that makes
+  records answerable internally also makes them answerable externally,
+  and the bunker-mentality institutions will sense that and decline.
+  That is fine. The market is the exhausted-but-pragmatic majority, not
+  everyone.
+
+- **Skewed evidence base.** Every hostile interaction in memory came
+  through FOIA — as an *adversary*, asking a known information-seeker's
+  question. That sample shows how institutions treat outside requesters.
+  It says almost nothing about how a finance director responds to "this
+  makes your own team faster." Different conversation, never yet had.
+
+- **Install-day normalization is the real hard problem.** The first
+  setup against a jurisdiction's idiosyncratic decade of spreadsheets
+  (2016 "Police" → 2023 "Public Safety") cannot be fully automated. If
+  every install requires artisan-grade reconciliation by hand, Model A's
+  treadmill has been quietly rebuilt on install day. **The feasibility
+  question worth funding:** can cross-year normalization become a guided
+  setup rather than a bespoke consulting engagement? Lived experience
+  reconciling 29 years of TEA data is exactly what qualifies an honest
+  answer here — keep it central, not buried under a clean demo.
+
+---
+
+# The one-sentence company line
+
+> **Civic Data Access** builds **Askable**: it makes the records a
+> jurisdiction *already holds* answerable in plain language — so the
+> people who work there stop spending afternoons on questions the
+> documents can already answer.
+
+Transparency is what happens anyway. It is never what we sell.
+
+---
+
+# Why this was hard to see (the note to self)
+
+The FOIA-analyst vantage point — outsider, prying data loose, treated as
+a threat — quietly shaped the mental model of the whole company toward
+the adversarial frame and the maintenance treadmill. The fear was not
+wrong; it was reporting something true (don't sell virtue to the
+virtue-averse). The error was the conclusion drawn from it (*therefore
+no buyer*). The correct, narrower conclusion: **no buyer for the
+mission — a real buyer for the relief.**
+
+Re-read until that distinction is reflexive.
