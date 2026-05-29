@@ -9,7 +9,7 @@ format:
     toc: true
     toc-depth: 2
     number-sections: false
-    embed-resources: false
+    embed-resources: true
 ---
 
 # How to read this document

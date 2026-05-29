@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Working strategy document">
+<meta name="author" content="Strategy / project-management working document">
 <meta name="dcterms.date" content="2026-05-17">
 
-<title>Askable — The Internal-Relief Pitch</title>
+<title>Feasibility Test: The Auto-Mapping Proposer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -2144,16 +2144,27 @@ vertical-align: -.125em;
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
+  <ul>
+  <li><a href="#why-this-document-exists" id="toc-why-this-document-exists" class="nav-link active" data-scroll-target="#why-this-document-exists"><span class="header-section-number">1</span> Why this document exists</a></li>
+  <li><a href="#the-one-sentence-the-whole-company-rests-on" id="toc-the-one-sentence-the-whole-company-rests-on" class="nav-link" data-scroll-target="#the-one-sentence-the-whole-company-rests-on"><span class="header-section-number">2</span> The one sentence the whole company rests on</a></li>
+  <li><a href="#what-the-proposer-is-so-the-test-target-is-unambiguous" id="toc-what-the-proposer-is-so-the-test-target-is-unambiguous" class="nav-link" data-scroll-target="#what-the-proposer-is-so-the-test-target-is-unambiguous"><span class="header-section-number">3</span> What the proposer is (so the test target is unambiguous)</a></li>
+  <li><a href="#the-proving-ground-the-tea-corpus" id="toc-the-proving-ground-the-tea-corpus" class="nav-link" data-scroll-target="#the-proving-ground-the-tea-corpus"><span class="header-section-number">4</span> The proving ground: the TEA corpus</a></li>
+  <li><a href="#test-design" id="toc-test-design" class="nav-link" data-scroll-target="#test-design"><span class="header-section-number">5</span> Test design</a>
   <ul class="collapse">
-  <li><a href="#how-to-read-this-document" id="toc-how-to-read-this-document" class="nav-link active" data-scroll-target="#how-to-read-this-document">How to read this document</a></li>
-  <li><a href="#the-wedge-in-two-paragraphs-the-version-that-must-hold-up" id="toc-the-wedge-in-two-paragraphs-the-version-that-must-hold-up" class="nav-link" data-scroll-target="#the-wedge-in-two-paragraphs-the-version-that-must-hold-up">The wedge, in two paragraphs (the version that must hold up)</a></li>
-  <li><a href="#who-actually-feels-the-pain-the-real-buyer" id="toc-who-actually-feels-the-pain-the-real-buyer" class="nav-link" data-scroll-target="#who-actually-feels-the-pain-the-real-buyer">Who actually feels the pain (the real buyer)</a></li>
-  <li><a href="#why-this-is-model-b-and-why-that-matters-to-the-buyer" id="toc-why-this-is-model-b-and-why-that-matters-to-the-buyer" class="nav-link" data-scroll-target="#why-this-is-model-b-and-why-that-matters-to-the-buyer">Why this is Model B (and why that matters to the buyer)</a></li>
-  <li><a href="#the-pitch-sequenced-say-it-in-this-order-order-is-the-strategy" id="toc-the-pitch-sequenced-say-it-in-this-order-order-is-the-strategy" class="nav-link" data-scroll-target="#the-pitch-sequenced-say-it-in-this-order-order-is-the-strategy">The pitch, sequenced (say it in this order — order is the strategy)</a></li>
-  <li><a href="#words-to-keep-out-of-the-buyer-conversation" id="toc-words-to-keep-out-of-the-buyer-conversation" class="nav-link" data-scroll-target="#words-to-keep-out-of-the-buyer-conversation">Words to keep out of the buyer conversation</a></li>
-  <li><a href="#the-honest-limits-so-the-reframe-doesnt-curdle-into-overconfidence" id="toc-the-honest-limits-so-the-reframe-doesnt-curdle-into-overconfidence" class="nav-link" data-scroll-target="#the-honest-limits-so-the-reframe-doesnt-curdle-into-overconfidence">The honest limits (so the reframe doesn’t curdle into overconfidence)</a></li>
-  <li><a href="#the-one-sentence-company-line" id="toc-the-one-sentence-company-line" class="nav-link" data-scroll-target="#the-one-sentence-company-line">The one-sentence company line</a></li>
-  <li><a href="#why-this-was-hard-to-see-the-note-to-self" id="toc-why-this-was-hard-to-see-the-note-to-self" class="nav-link" data-scroll-target="#why-this-was-hard-to-see-the-note-to-self">Why this was hard to see (the note to self)</a></li>
+  <li><a href="#datasets-run-against-three-not-one" id="toc-datasets-run-against-three-not-one" class="nav-link" data-scroll-target="#datasets-run-against-three-not-one"><span class="header-section-number">5.1</span> Datasets (run against three, not one)</a></li>
+  <li><a href="#the-protocol" id="toc-the-protocol" class="nav-link" data-scroll-target="#the-protocol"><span class="header-section-number">5.2</span> The protocol</a></li>
+  </ul></li>
+  <li><a href="#what-good-enough-means-numerically-agreed-in-advance" id="toc-what-good-enough-means-numerically-agreed-in-advance" class="nav-link" data-scroll-target="#what-good-enough-means-numerically-agreed-in-advance"><span class="header-section-number">6</span> What “good enough” means — numerically, agreed in advance</a>
+  <ul class="collapse">
+  <li><a href="#primary-metric-draft-acceptance-rate-dar" id="toc-primary-metric-draft-acceptance-rate-dar" class="nav-link" data-scroll-target="#primary-metric-draft-acceptance-rate-dar"><span class="header-section-number">6.1</span> Primary metric — Draft Acceptance Rate (DAR)</a></li>
+  <li><a href="#secondary-metric-non-engineer-completion-nec" id="toc-secondary-metric-non-engineer-completion-nec" class="nav-link" data-scroll-target="#secondary-metric-non-engineer-completion-nec"><span class="header-section-number">6.2</span> Secondary metric — Non-Engineer Completion (NEC)</a></li>
+  <li><a href="#tertiary-metric-failure-honesty" id="toc-tertiary-metric-failure-honesty" class="nav-link" data-scroll-target="#tertiary-metric-failure-honesty"><span class="header-section-number">6.3</span> Tertiary metric — Failure Honesty</a></li>
+  <li><a href="#efficiency-metric-time-to-first-trustworthy-config" id="toc-efficiency-metric-time-to-first-trustworthy-config" class="nav-link" data-scroll-target="#efficiency-metric-time-to-first-trustworthy-config"><span class="header-section-number">6.4</span> Efficiency metric — Time-to-First-Trustworthy-Config</a></li>
+  </ul></li>
+  <li><a href="#the-decision-the-experiment-forces" id="toc-the-decision-the-experiment-forces" class="nav-link" data-scroll-target="#the-decision-the-experiment-forces"><span class="header-section-number">7</span> The decision the experiment forces</a></li>
+  <li><a href="#why-this-must-precede-any-demo" id="toc-why-this-must-precede-any-demo" class="nav-link" data-scroll-target="#why-this-must-precede-any-demo"><span class="header-section-number">8</span> Why this must precede any demo</a></li>
+  <li><a href="#project-manager-checklist-sequenced" id="toc-project-manager-checklist-sequenced" class="nav-link" data-scroll-target="#project-manager-checklist-sequenced"><span class="header-section-number">9</span> Project-manager checklist (sequenced)</a></li>
+  <li><a href="#the-one-risk-this-document-is-built-to-prevent" id="toc-the-one-risk-this-document-is-built-to-prevent" class="nav-link" data-scroll-target="#the-one-risk-this-document-is-built-to-prevent"><span class="header-section-number">10</span> The one risk this document is built to prevent</a></li>
   </ul>
 </nav>
 </div>
@@ -2161,8 +2172,8 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Askable — The Internal-Relief Pitch</h1>
-<p class="subtitle lead">Civic Data Access · Model B (the jurisdiction keeps custody)</p>
+<h1 class="title">Feasibility Test: The Auto-Mapping Proposer</h1>
+<p class="subtitle lead">Civic Data Access · the experiment that de-risks the company</p>
 </div>
 
 
@@ -2172,7 +2183,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Working strategy document </p>
+             <p>Strategy / project-management working document </p>
           </div>
   </div>
     
@@ -2191,39 +2202,144 @@ vertical-align: -.125em;
 </header>
 
 
-<section id="how-to-read-this-document" class="level1">
-<h1>How to read this document</h1>
-<p>This is not a marketing brochure. It is a thinking tool — written to be read and re-read until the frame is automatic.</p>
-<p>The single idea to internalize:</p>
+<section id="why-this-document-exists" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Why this document exists</h1>
+<p>This is written for the <strong>project-manager</strong> seat, not the data-scientist seat. The data-science work is real, but the thing that has to be understood and completed <em>before any demo</em> is the design and result of <strong>one experiment</strong>:</p>
 <blockquote class="blockquote">
-<p><strong>The institution is not buying transparency. It is buying relief from its own pain. The citizen benefit is a side effect we mention second — never the argument.</strong></p>
+<p><strong>On a realistic decade of messy municipal spreadsheets, how far can an automated mapping proposer get before a human is required — and can that human be a non-engineer?</strong></p>
 </blockquote>
-<p>If at any point a draft, a slide, or a sentence starts selling <em>civic virtue</em> to the buyer, it has drifted back to the pitch that fails in the room. Come back here.</p>
+<p>Everything else (the chatbot, the charts, the retrieval) is demonstrable and, frankly, not where the company’s risk lives. The proposer is. If it works, Model B is a software company. If it doesn’t, Model B is a consulting practice wearing a software costume. This document defines how to find out, on purpose, before spending money on polish.</p>
+<p>The project manager’s job is <strong>not</strong> to build the proposer. It is to make sure this experiment is run honestly, scoped tightly, and judged against numbers agreed <em>in advance</em> — not numbers rationalized afterward.</p>
 <hr>
 </section>
-<section id="the-wedge-in-two-paragraphs-the-version-that-must-hold-up" class="level1">
-<h1>The wedge, in two paragraphs (the version that must hold up)</h1>
-<p><em>(This is the test. If these two paragraphs feel true without the words “transparency” or “citizen” doing the persuading, the wedge is real.)</em></p>
-<p>You already have the data. Every budget figure, every staffing number, every reported total began life in an Excel file on your finance server — long before it became a PDF on the website. The problem isn’t that the information is missing. The problem is that <strong>your own people can’t get answers out of it either.</strong> A council member asks what changed in a budget line over five years and it takes a staffer half a day. A records request comes in and someone re-derives an answer the documents already contain. Institutional memory walks out the door with every departure.</p>
-<p><strong>Askable</strong> installs against the source files <strong>you already hold</strong> and makes them answerable in plain language — first for <em>your</em> staff. “What did we budget for this line in each of the last six years?” returns a sourced answer, with the file and figure it came from, in seconds instead of an afternoon. It runs on your data, on your terms, in your environment. We set it up and step back; custody never leaves your office. The fact that residents can then self-serve the routine questions — and stop calling your staff to ask them — is a benefit you get for free. It is not the reason to do this. The reason to do this is that <strong>your own team gets its time back.</strong></p>
+<section id="the-one-sentence-the-whole-company-rests-on" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> The one sentence the whole company rests on</h1>
+<blockquote class="blockquote">
+<p>The engine is generic and shipped identically to everyone. The per-jurisdiction <em>mapping</em> is bespoke and unavoidable. The company is viable <strong>only if the labor of producing that mapping can be mostly automated</strong>, with the remainder completable by a non-engineer using review tooling.</p>
+</blockquote>
+<p>The experiment measures exactly that “mostly” and that “remainder.”</p>
 <hr>
 </section>
-<section id="who-actually-feels-the-pain-the-real-buyer" class="level1">
-<h1>Who actually feels the pain (the real buyer)</h1>
-<p>Not the transparency advocate. That person doesn’t exist inside the building, and selling to them is the pitch that fails. The buyer is whoever is <strong>exhausted by their own inaccessible records</strong>:</p>
+<section id="what-the-proposer-is-so-the-test-target-is-unambiguous" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> What the proposer is (so the test target is unambiguous)</h1>
+<p>The proposer is software that ingests a pile of a jurisdiction’s source spreadsheets and <strong>emits a draft mapping configuration</strong> — a structured file (not code) that the generic engine will later consume. A human then <strong>reviews and corrects</strong> that draft.</p>
+<p>The draft mapping must make decisions in roughly these categories:</p>
+<ol type="1">
+<li><strong>Field identification</strong> — which column is a fiscal year, which is a dollar amount, which is a headcount, which is a label/category, which is noise.</li>
+<li><strong>Entity canonicalization</strong> — “Police”, “PD”, “Police Dept”, “Public Safety – Police” all resolve to one canonical entity.</li>
+<li><strong>Schema-era detection</strong> — recognizing that 2008–2014 files use one layout, 2015–2019 another, 2020+ another, and bounding those eras.</li>
+<li><strong>Authority/version resolution</strong> — which sheet/tab/file is the published-source-of-truth vs. a scratch or superseded copy.</li>
+<li><strong>Cross-year linkage</strong> — asserting that this line item in year <em>N</em> is the continuation of that line item in year <em>N−1</em> despite renaming, splitting, or merging.</li>
+</ol>
+<p>The test does <strong>not</strong> measure whether the chatbot is impressive. It measures the <strong>correctness of these five decision types</strong> against a known-correct answer.</p>
+<hr>
+</section>
+<section id="the-proving-ground-the-tea-corpus" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> The proving ground: the TEA corpus</h1>
+<p>The 29 years of Texas Education Agency data already normalized by hand is not just credibility for a pitch. It is the single most valuable asset available for this experiment, because it is a <strong>decade-plus of real, messy, institutional spreadsheet drift for which a human-verified, correct normalization already exists.</strong></p>
+<p>That means it can serve as <strong>ground truth</strong>. The proposer’s draft can be scored against the known-correct hand mapping objectively, rather than judged by impression. Almost nobody attempting this category of company has a labeled ground-truth corpus of this depth. It should be the first proving ground precisely because the answer key already exists.</p>
+<p><strong>Project-manager actions for the corpus:</strong></p>
 <ul>
-<li><strong>The clerk</strong> drowning in records requests that the documents could answer without human labor.</li>
-<li><strong>The new council member</strong> who cannot get a straight, fast answer about what was decided before they arrived.</li>
-<li><strong>The finance director</strong> who can’t quickly reconstruct a budget line’s history when the manager asks “why is this up?”</li>
-<li><strong>The line staffer</strong> who loses a day answering a question the record already contains.</li>
-<li><strong>The administrator</strong> watching institutional knowledge leave with every retirement and resignation.</li>
+<li>Freeze a copy of the <em>raw, pre-normalization</em> TEA source files (the inputs as originally received, untouched).</li>
+<li>Freeze the <em>hand-produced normalized result + the mapping decisions</em> that produced it (the answer key).</li>
+<li>Confirm the answer key can be expressed in the proposer’s config schema (if it can’t, the schema is wrong — that itself is a finding).</li>
+<li><strong>Quarantine</strong> the answer key from anyone tuning the proposer, so the test is not contaminated by teaching-to-the-answer.</li>
 </ul>
-<p>None of these people care about the mission. <strong>All of them want their afternoon back.</strong> That want is the entire market.</p>
 <hr>
 </section>
-<section id="why-this-is-model-b-and-why-that-matters-to-the-buyer" class="level1">
-<h1>Why this is Model B (and why that matters to the buyer)</h1>
-<p>Model B is not a deployment detail. It is the reason a defensive, information-averse institution can still say yes.</p>
+<section id="test-design" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Test design</h1>
+<section id="datasets-run-against-three-not-one" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="datasets-run-against-three-not-one"><span class="header-section-number">5.1</span> Datasets (run against three, not one)</h2>
+<p>A single corpus proves nothing about generalization. Use three tiers:</p>
+<ol type="1">
+<li><p><strong>TEA corpus (primary, has ground truth).</strong> Full objective scoring possible. This is the spine of the experiment.</p></li>
+<li><p><strong>One non-TEA municipal corpus (generalization check).</strong> A city or district budget archive, ~8–12 years, <em>without</em> a pre-existing answer key. Here a human normalizes it once <em>after</em> the proposer runs, recording how much was kept vs. corrected. Tests whether the proposer generalizes beyond the domain its designer knows best.</p></li>
+<li><p><strong>One deliberately hostile corpus (failure-mode probe).</strong> The worst real archive obtainable — mixed formats, reorganized departments, missing years, manual overrides. Not scored for a passing grade; run to <em>characterize how it fails</em> (does it fail loudly and flag uncertainty, or fail silently and assert wrong answers confidently?). Silent confident failure is disqualifying; loud flagged uncertainty is acceptable.</p></li>
+</ol>
+</section>
+<section id="the-protocol" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="the-protocol"><span class="header-section-number">5.2</span> The protocol</h2>
+<ol type="1">
+<li>Freeze raw inputs and (where available) the answer key.</li>
+<li>Run the proposer cold — no per-corpus hand-tuning.</li>
+<li>Capture the draft mapping it emits.</li>
+<li>Score the draft against ground truth (TEA) or against a post-hoc human normalization (others).</li>
+<li>Have a <strong>non-engineer</strong> (a finance/records-analyst profile, not a developer) attempt to complete/correct the draft using only the review tooling. Time it. Record where they get stuck.</li>
+<li>Record every place a human <em>had</em> to intervene and classify the intervention as <em>mechanical</em> (a non-engineer can do it) vs. <em>institutional judgment</em> (requires deep domain sense).</li>
+</ol>
+<p>Step 6 is the heart of the experiment. The split between “mechanical” and “institutional-judgment” interventions is the actual result the company lives or dies on.</p>
+<hr>
+</section>
+</section>
+<section id="what-good-enough-means-numerically-agreed-in-advance" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> What “good enough” means — numerically, agreed in advance</h1>
+<p>These thresholds are written down <em>before</em> the test so the result cannot be rationalized afterward. They are deliberately conservative; adjust the exact figures with the team, but adopt <em>some</em> fixed number before running, not after.</p>
+<section id="primary-metric-draft-acceptance-rate-dar" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="primary-metric-draft-acceptance-rate-dar"><span class="header-section-number">6.1</span> Primary metric — Draft Acceptance Rate (DAR)</h2>
+<p>Of all mapping decisions the proposer emits, the fraction a human verifies as correct <strong>without modification</strong>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>DAR (TEA, cold)</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>≥ 80%</strong></td>
+<td>Strong. The labor is productizable. Model B is a software company. Proceed.</td>
+</tr>
+<tr class="even">
+<td><strong>65–79%</strong></td>
+<td>Promising but unproven. The remaining 20–35% must be shown completable by a <em>non-engineer</em> (see secondary metric) before proceeding.</td>
+</tr>
+<tr class="odd">
+<td><strong>50–64%</strong></td>
+<td>Caution. Likely a configurable-template business, not a turnkey one. Re-scope expectations and pricing before any build.</td>
+</tr>
+<tr class="even">
+<td><strong>&lt; 50%</strong></td>
+<td>The proposer does not de-risk the labor. Model B as “install and step back” is not yet real. Stop and rethink before spending on demo polish.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="secondary-metric-non-engineer-completion-nec" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="secondary-metric-non-engineer-completion-nec"><span class="header-section-number">6.2</span> Secondary metric — Non-Engineer Completion (NEC)</h2>
+<p>Of the decisions the proposer got wrong or left uncertain, the fraction a <strong>non-engineer</strong> can correctly resolve using only the review tooling, within a bounded time budget.</p>
+<ul>
+<li><strong>Target: ≥ 90% of the remainder resolvable by a non-engineer.</strong></li>
+<li>The ≤10% that genuinely requires deep institutional judgment defines the <em>irreducible</em> onboarding cost — that is acceptable and expected; it just must be small, bounded, and <em>not require an engineer or the founder personally.</em></li>
+</ul>
+<blockquote class="blockquote">
+<p>The company-defining question is <strong>not</strong> “is DAR 100%?” (it never will be). It is “is the <em>non-DAR remainder</em> completable by a non-engineer in bounded time?” A 70% DAR with 95% NEC is a better business than a 85% DAR whose remainder needs a data scientist.</p>
+</blockquote>
+</section>
+<section id="tertiary-metric-failure-honesty" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="tertiary-metric-failure-honesty"><span class="header-section-number">6.3</span> Tertiary metric — Failure Honesty</h2>
+<p>On the hostile corpus: of the decisions the proposer got wrong, the fraction it <strong>flagged as low-confidence</strong> rather than asserting confidently.</p>
+<ul>
+<li><strong>Target: ≥ 95% of errors self-flagged.</strong></li>
+<li>A confidently-wrong number with a citation is worse than no answer. Loud uncertainty is a feature; silent confident error is disqualifying regardless of DAR.</li>
+</ul>
+</section>
+<section id="efficiency-metric-time-to-first-trustworthy-config" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="efficiency-metric-time-to-first-trustworthy-config"><span class="header-section-number">6.4</span> Efficiency metric — Time-to-First-Trustworthy-Config</h2>
+<p>Wall-clock time for the non-engineer to take a corpus from raw files to a config they would stand behind.</p>
+<ul>
+<li>This is the number that becomes the <strong>onboarding cost</strong> in the business model and the pricing. It is not pass/fail; it is the input that tells you whether onboarding is a bounded setup fee or an open-ended engagement. Capture it precisely; it feeds the financial model directly.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="the-decision-the-experiment-forces" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> The decision the experiment forces</h1>
+<p>The experiment exists to produce <strong>one of four explicit verdicts</strong>, each with a predetermined next action. Deciding the actions now prevents motivated reasoning later.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -2232,85 +2348,63 @@ vertical-align: -.125em;
 </colgroup>
 <thead>
 <tr class="header">
-<th></th>
-<th>What it means</th>
-<th>Why the buyer cares</th>
+<th>Verdict</th>
+<th>Condition</th>
+<th>Predetermined next action</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Their data, their custody</strong></td>
-<td>Askable runs against the source files the jurisdiction already holds. Nothing is extracted, published, or sent out.</td>
-<td>No new exposure. No “are we releasing more than we must?” objection.</td>
+<td><strong>Green</strong></td>
+<td>DAR ≥ 80% <strong>and</strong> NEC ≥ 90% <strong>and</strong> Failure Honesty ≥ 95%</td>
+<td>Model B confirmed. Proceed to engine + demo build. The proposer is the moat; resource it accordingly.</td>
 </tr>
 <tr class="even">
-<td><strong>No FOIA, internally</strong></td>
-<td>Inside the building it is their own file on their own drive. FOIA is irrelevant to the customer.</td>
-<td>The thing they’re defensive about (outside extraction) simply isn’t what’s happening.</td>
+<td><strong>Yellow-Template</strong></td>
+<td>DAR 50–79% but NEC ≥ 90%</td>
+<td>Viable as a <em>template-driven</em> business. The domain-template library is the real product. Re-scope, re-price, then proceed.</td>
 </tr>
 <tr class="odd">
-<td><strong>Install and step back</strong></td>
-<td>We stand it up against their environment; ongoing custody, storage, and control stay with them.</td>
-<td>No dependency on a vendor holding their data forever. No treadmill they’re signing up for.</td>
+<td><strong>Yellow-Watch</strong></td>
+<td>DAR ≥ 65% but NEC &lt; 90%</td>
+<td>The remainder needs expert judgment. Either invest specifically in raising NEC, or accept a higher-touch onboarding model and price it honestly. Do <strong>not</strong> demo as turnkey.</td>
 </tr>
 <tr class="even">
-<td><strong>Internal-first value</strong></td>
-<td>The first visible result is <em>their staff</em> answering questions faster.</td>
-<td>The benefit lands on the person who signs, not on an abstract public.</td>
+<td><strong>Red</strong></td>
+<td>DAR &lt; 50% <strong>or</strong> Failure Honesty &lt; 90%</td>
+<td>“Install and step back” is not real yet. Do not spend on demo polish. Return to the proposer design, or reconsider whether the business is Model A after all.</td>
 </tr>
 </tbody>
 </table>
-<p>The honest line for the room:</p>
-<blockquote class="blockquote">
-<p>“You’re not exposing anything. You’re not sending us your data. You’re not doing extra work for the public. You’re pointing a tool at files you already have so your own people stop spending afternoons on questions the documents can already answer.”</p>
-</blockquote>
+<p>The project-manager deliverable is <strong>not a working product</strong>. It is a signed-off verdict from this table, with the numbers attached.</p>
 <hr>
 </section>
-<section id="the-pitch-sequenced-say-it-in-this-order-order-is-the-strategy" class="level1">
-<h1>The pitch, sequenced (say it in this order — order is the strategy)</h1>
+<section id="why-this-must-precede-any-demo" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Why this must precede any demo</h1>
+<p>A demo proves the <em>engine</em> — the chatbot, the chart, the sourced answer. The engine is the easy, fun, fundable-looking part, and it is <strong>not where the risk is.</strong> A polished demo built before this experiment runs is a demo that hides the only question that matters. Funders sophisticated enough to write the check will probe the normalization labor; an honest, numeric answer to this experiment is a stronger asset in that room than a slick chatbot that quietly assumes the hard part away.</p>
+<p>Run the experiment. Get the verdict. <em>Then</em> decide what to demo.</p>
+<hr>
+</section>
+<section id="project-manager-checklist-sequenced" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Project-manager checklist (sequenced)</h1>
 <ol type="1">
-<li><p><strong>Name their pain, not our mission.</strong> “Your staff spends real time answering questions your own documents already contain. Records requests, council questions, budget history — re-derived by hand, over and over.”</p></li>
-<li><p><strong>Locate the cause without blame.</strong> “It’s not a staffing problem. The data exists — it just isn’t answerable. Everything starts in Excel and ends in a PDF, and the PDF can’t be questioned.”</p></li>
-<li><p><strong>Offer the relief, on their terms.</strong> “Askable installs against the source files you already hold and makes them answerable in plain English — for your team first. Your data stays with you. We set it up and step back.”</p></li>
-<li><p><strong>Mention the public benefit second, as deflection, not virtue.</strong> “And because the routine questions become self-serve, residents stop calling your staff to ask them. Fewer repetitive requests is a side effect — a welcome one.”</p></li>
-<li><p><strong>Stop.</strong> Do not argue democracy. The room already said yes for its own reasons. The mission was served through the back door.</p></li>
+<li>Freeze raw TEA inputs and the hand-normalized answer key; quarantine the key.</li>
+<li>Confirm the answer key is expressible in the proposer’s config schema (failure here is itself an early finding).</li>
+<li>Acquire one non-TEA municipal corpus and one hostile corpus.</li>
+<li>Agree the four metric thresholds <strong>in writing</strong> before any run.</li>
+<li>Recruit a genuine non-engineer (finance/records-analyst profile) for the NEC test — not a developer, not the founder.</li>
+<li>Run the proposer cold against all three corpora.</li>
+<li>Score DAR, NEC, Failure Honesty, Time-to-First-Trustworthy-Config.</li>
+<li>Classify every human intervention as mechanical vs. institutional-judgment.</li>
+<li>Map results to the verdict table; record the verdict and the numbers.</li>
+<li>Only after a Green or re-scoped Yellow verdict: begin engine/demo build.</li>
 </ol>
 <hr>
 </section>
-<section id="words-to-keep-out-of-the-buyer-conversation" class="level1">
-<h1>Words to keep out of the buyer conversation</h1>
-<p>These belong in the investor deck and the public-facing story — <strong>not</strong> in the sentence that asks an administrator to sign:</p>
-<ul>
-<li>“Transparency”</li>
-<li>“Accountability”</li>
-<li>“The public’s right to know”</li>
-<li>“Hold officials accountable”</li>
-<li>“Watchdog”</li>
-</ul>
-<p>Each one reframes the tool as the citizen’s <em>weapon</em> — exactly the lens that makes a defensive institution balk. The relief pitch never needs them, and is stronger without them.</p>
-<hr>
-</section>
-<section id="the-honest-limits-so-the-reframe-doesnt-curdle-into-overconfidence" class="level1">
-<h1>The honest limits (so the reframe doesn’t curdle into overconfidence)</h1>
-<ul>
-<li><p><strong>The most defensive ~20–30% still won’t buy.</strong> A tool that makes records answerable internally also makes them answerable externally, and the bunker-mentality institutions will sense that and decline. That is fine. The market is the exhausted-but-pragmatic majority, not everyone.</p></li>
-<li><p><strong>Skewed evidence base.</strong> Every hostile interaction in memory came through FOIA — as an <em>adversary</em>, asking a known information-seeker’s question. That sample shows how institutions treat outside requesters. It says almost nothing about how a finance director responds to “this makes your own team faster.” Different conversation, never yet had.</p></li>
-<li><p><strong>Install-day normalization is the real hard problem.</strong> The first setup against a jurisdiction’s idiosyncratic decade of spreadsheets (2016 “Police” → 2023 “Public Safety”) cannot be fully automated. If every install requires artisan-grade reconciliation by hand, Model A’s treadmill has been quietly rebuilt on install day. <strong>The feasibility question worth funding:</strong> can cross-year normalization become a guided setup rather than a bespoke consulting engagement? Lived experience reconciling 29 years of TEA data is exactly what qualifies an honest answer here — keep it central, not buried under a clean demo.</p></li>
-</ul>
-<hr>
-</section>
-<section id="the-one-sentence-company-line" class="level1">
-<h1>The one-sentence company line</h1>
-<blockquote class="blockquote">
-<p><strong>Civic Data Access</strong> builds <strong>Askable</strong>: it makes the records a jurisdiction <em>already holds</em> answerable in plain language — so the people who work there stop spending afternoons on questions the documents can already answer.</p>
-</blockquote>
-<p>Transparency is what happens anyway. It is never what we sell.</p>
-<hr>
-</section>
-<section id="why-this-was-hard-to-see-the-note-to-self" class="level1">
-<h1>Why this was hard to see (the note to self)</h1>
-<p>The correct, narrower conclusion: <strong>no buyer for the ‘virtuous’ mission — a real buyer for the relief the product provides.</strong></p>
-<p>Re-read until that distinction is reflexive.</p>
+<section id="the-one-risk-this-document-is-built-to-prevent" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> The one risk this document is built to prevent</h1>
+<p>The natural failure mode of a technically strong founder is to build the satisfying part (the engine, the demo) and let it quietly stand in for proof of the unsatisfying part (the normalization labor). This document exists to keep that substitution from happening by accident. The proposer experiment is the company’s actual de-risking event. Everything else is downstream of its verdict.</p>
+<p>One observation worth leaving you with, since you’ve now produced three strategy documents in a row: the through-line in all of them is the same single discipline — prove the company before you polish it, and let the verdict, not enthusiasm, authorize the next dollar. You keep arriving at that principle from different directions (the Model A/B fork, the demo-vs-proposer question, now the hiring question). That repetition is a good sign — it means the framework is stable, not that you’re going in circles. The next time you feel the pull to build or hire the satisfying thing first, these three documents are the counterweight you wrote to yourself.</p>
 </section>
 
 </main>

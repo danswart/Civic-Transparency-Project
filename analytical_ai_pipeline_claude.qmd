@@ -1,0 +1,807 @@
+---
+title: "From Retrieval Assistant to Analytical Engine"
+subtitle: "A Pipeline Proposal for Civic AI That Evaluates Decision Quality, Identifies Hidden Assumptions, and Distinguishes Evidence from Rhetoric"
+authors: 
+  - name: "Dan Swart, CPA (ret)"
+date: today
+date-format: long
+# bibliography: manual-refs.bib
+format:
+  html:
+    resources:
+      - reference-backlinks.js
+    include-after-body:    
+      - text: |
+          # <script type="text/javascript" src="reference-backlinks.js"></script>
+    default: true         
+    code-copy: true
+    code-link: true        # This adds individual buttons
+    code-fold: true        # Hide code by default, show on click
+    code-summary: "Show the code"
+    code-overflow: wrap
+    code-block-bg: "#FAEBD7"
+    code-block-border-left: "#31BAE9"
+    embed-resources: true     # Set to 'false' for drafts. Override if you're NOT sharing output
+    include-in-header:
+      - text: 
+          <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+      - header.html
+    css:
+      - swart.css
+      - tachyons.min.css
+      - r-colors.css
+    fontsize: 18pt
+    lightbox: true
+    page-layout: full
+    fig-width: 13
+    fig-height: 8
+    fig-dpi: 300
+    html-math-method: katex
+    df-print: paged
+    toc: true
+    toc-float: true
+    citeproc: true
+    link-citations: true
+    linestretch: 1.0
+    self-contained: false
+    
+    
+    
+  typst:
+    fig-width: 13
+    fig-height: 8
+    fig-dpi: 300
+    margin:
+      x: 1in
+      y: 1in
+    toc: true
+    fontsize: 16pt
+    mainfont: "Cabin"
+  
+
+    
+  revealjs:
+    slide-number: true
+    transition: fade
+    code-overflow: wrap
+    center: true
+    smaller: true
+    scrollable: true
+    chalkboard: true
+    multiplex: false
+    theme: solarized
+    reference-location: margin
+    logo: img/red-cross-640-435.png
+    footer: "Footer text"
+    code-block-height: 650px
+
+
+
+  # docx:
+  #   highlight-style: github
+  #   fig_caption: true
+
+
+
+editor: source
+
+quarto:
+  render:
+    cache-refresh: true
+
+
+# for .qmd filesd
+execute:
+  echo: false
+  message: false
+  warning: false
+  eval: true
+  fig-width: 13
+  fig-height: 8
+
+
+# for .rmd files
+knitr:
+  opts_chunk:
+    echo: false
+    error: false
+    warning: false
+    message: false
+    cache: false
+
+params:
+  data_updated: !expr format(Sys.Date(), "%B %Y")
+---
+
+
+```{r}
+#| label: setup
+#| include: false
+
+# Capture current filename for use in document
+file_name <- if (!base::is.null(knitr::current_input())) {
+  paste0(tools::file_path_sans_ext(knitr::current_input()), ".qmd")
+} else {
+  "interactive_session.qmd"
+}
+
+file_stem <- tools::file_path_sans_ext(file_name)
+
+
+
+# install.packages(c("mapview", "survey", "srvyr", "arcgislayers"))
+
+# census_api_key("95496766c51541ee6f402c1e1a8658581285b759", install = TRUE, overwrite = TRUE)
+
+
+# load libraries 
+library(flextable)
+library(ftExtra)
+library(officer)
+library(dplyr)
+
+
+# Download button helpers live here; knitr::is_html_output() guard is inside
+# the helpers so they silently no-op when rendering to typst
+source(here::here("R", "download_button_helpers.R"))
+
+# Force dplyr's select to take precedence
+select <- dplyr::select
+filter <- dplyr::filter
+
+# Options
+options(scipen = 999)
+options(qic.clshade = T) # NO LONGER NEEDED; CHARTS ALL PREPARED WITH GGPLOT2 ONLY
+options(qic.linecol = 'black') # NO LONGER NEEDED; CHARTS ALL PREPARED WITH GGPLOT2 ONLY
+options(qic.signalcol = "firebrick") # NO LONGER NEEDED; CHARTS ALL PREPARED WITH GGPLOT2 ONLY
+options(qic.targetcol = "purple") # NO LONGER NEEDED; CHARTS ALL PREPARED WITH GGPLOT2 ONLY
+options(DT.options = list(dom = 'pBlfrti')) # Add buttons, filtering, and top (t) pagination controls
+options(shiny.maxRequestSize = 50 * 1024^2) # Set upload maximum to 50 MB
+options(tigris_use_cache = TRUE)
+options(device = "RStudioGD") 
+
+
+# ── ds_style_flextable() ──────────────────────────────────────────────────────
+# Standard Dan Swart flextable styling.
+# Row 1 of add_header_lines() = blue italic bold, white background.
+# Row 2 of add_header_lines() = pale green background.
+# Body uses autofit(); no auto-themes applied.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Flextable defaults:
+flextable::set_flextable_defaults(
+  font.size = 14, 
+  font.family = "Cabin",
+  font.color = "black",
+  table.layout = "autofit",
+  border.color = "darkgray",
+  padding.top = 3, padding.bottom = 3,
+  padding.left = 4, padding.right = 4,
+  line_spacing = 1.3,
+  digits = 2,
+  decimal.mark = ".",
+  big.mark = " ",
+  na_str = "<na>",
+  theme_fun = base::identity,          # <-- add this
+  post_process_html = identity,
+  post_process_docx = identity
+)
+
+
+
+# Set global theme for consistent plots
+ggplot2::theme_set(
+  ggplot2::theme_minimal(base_size = 20) +
+    ggplot2::theme(
+      plot.title.position = "plot",
+      plot.title = ggtext::element_textbox_simple(
+        family = "Cabin",
+        face = "bold",
+        color = "darkgreen",
+        size = 28,
+        fill = "yellow",
+        lineheight = 0.9,
+        padding = ggplot2::margin(5.5, 5.5, 0.0, 5.5),
+        margin = ggplot2::margin(0, 0, 5.5, 0)
+      ),
+      plot.subtitle = ggtext::element_textbox_simple(
+        family = "Cabin",
+        color = "darkgreen",
+        face = "bold",
+        size = 22,
+        fill = "yellow",
+        lineheight = 0.9,
+        padding = ggplot2::margin(5.5, 5.5, 5.5, 5.5),
+        margin = ggplot2::margin(0.0, 0, 5.5, 0)
+      ),
+      plot.caption = ggtext::element_markdown(
+        family = "Cabin",
+        size = 18,
+        hjust = 1,
+        color = "darkblue",
+        face = "italic",
+        fill = "yellow",
+        lineheight = 1.0
+      ),
+      axis.text.x = ggtext::element_markdown(
+        family = "Cabin",
+        face = "bold",
+        color = "blue",
+        size = 18,
+        angle = 45,
+        hjust = 1
+      ),
+        # ggplot2::element_blank(),
+      axis.title.x = ggtext::element_markdown(
+        family = "Cabin",
+        face = "bold",
+        color = "blue",
+        size = 18),
+        # ggplot2::element_blank(),
+      axis.text.y = ggtext::element_markdown(
+        family = "Cabin",
+        face = "bold",
+        color = "blue",
+        size = 18,
+        angle = 45,
+        hjust = 1
+      ),
+        # ggplot2::element_blank(),
+      axis.title.y = ggtext::element_markdown(
+        family = "Cabin",
+        face = "bold",
+        color = "blue",
+        size = 12),
+        # ggplot2::element_blank(),
+      strip.text = ggtext::element_markdown(
+        family = "Cabin",
+        color = "black",
+        size = 18,
+        face = "italic",
+        margin = ggplot2::margin(2, 0, 0.5, 0, "lines")
+      ),
+      axis.text = ggtext::element_markdown(
+        family = "Cabin",
+        color = "black"),
+      panel.background = ggplot2::element_rect(fill = "white", color = NA),
+      plot.background = ggplot2::element_rect(fill = "white", color = NA),
+      legend.position = "none",
+      panel.spacing.x = grid::unit(1.5, "cm"),
+      panel.spacing.y = grid::unit(1.5, "cm"),
+      plot.margin = ggplot2::margin(20, 20, 20, 20, "pt")
+    )
+)
+
+
+# claude <- ellmer::chat_anthropic(model = "claude-opus-4-6-20260205")
+  
+# Set seed for reproducibility
+base::set.seed(123)
+
+```
+
+
+\
+
+#### **Filename:**
+
+::: {.content-visible when-format="html"}
+[`r file_name`]{style="word-break: break-all; font-size: 1.00em;"}
+:::
+
+```{=typst}
+#let wrap_underscores(s) = s.replace("_", "_\u{200B}")
+#text(size: 16pt)[#raw(wrap_underscores("`r file_name`"))]
+```
+
+\
+\
+
+
+
+```{r}
+#| label: styling
+#| include: false
+
+# ── ds_style_flextable() ──────────────────────────────────────────────────────
+# Standard Dan  Swart flextable styling.
+# Row 1 of add_header_lines() = blue italic bold, white background.
+# Row 2 of add_header_lines() = pale green background.
+# Body uses autofit(); no auto-themes applied.
+# Standard table styler: blue italic title row + palegreen column header row.
+# Defined here so all QMDs that source this setup get the same presentation
+# without depending on census_helpers.R for a purely cosmetic function.
+
+# ─────────────────────────────────────────────────────────────────────────────
+
+ds_style_flextable <- function(ft, title_text, subtitle_text = NULL) {
+
+  # Add header rows (title first, subtitle second if provided)
+  if (!is.null(subtitle_text)) {
+    ft <- ft |>
+      add_header_lines(values = subtitle_text) |>
+      add_header_lines(values = title_text)
+  } else {
+    ft <- ft |>
+      add_header_lines(values = title_text)
+  }
+
+  n_header_rows <- nrow(ft$header$dataset)
+  title_row     <- 1L
+  subtitle_row  <- if (!is.null(subtitle_text)) 2L else NULL
+  col_head_row  <- n_header_rows   # last header row = column names
+
+  # ── title row: blue italic bold, white background ──────────────────────
+  ft <- ft |>
+    bold(i = title_row, part = "header") |>
+    italic(i = title_row, part = "header") |>
+    color(i = title_row, color = "#1F4E79", part = "header") |>
+    bg(i = title_row, bg = "white", part = "header") |>
+    fontsize(i = title_row, size = 16, part = "header")
+
+  # ── subtitle row: pale green background (conditional) ───────────────────
+  if (!is.null(subtitle_row)) {
+    ft <- ft |>
+      bg(i = subtitle_row, bg = "#E2EFDA", part = "header")
+  }
+
+  # ── remainder of styling ─────────────────────────────────────────────────
+  ft <- ft |>
+    # column-name row: bold, light grey background
+    bold(i = col_head_row, part = "header") |>
+    bg(i = col_head_row, bg = "#D9D9D9", part = "header") |>
+
+    # body: alternating row shading
+    bg(i = seq(2, nrow(ft$body$dataset), by = 2),
+       bg = "#F5F5F5", part = "body") |>
+
+    # borders
+    border_outer(part = "all",
+                 border = fp_border(color = "#BFBFBF", width = 1)) |>
+    border_inner_h(part = "body",
+                   border = fp_border(color = "#D9D9D9", width = 0.5)) |>
+    hline_bottom(part = "header",
+                 border = fp_border(color = "#1F4E79", width = 1.5)) |>
+
+   # typography
+    font(fontname = "Arial", part = "all") |>
+    fontsize(size = 16, part = "body") |>
+    fontsize(size = 18, part = "header") |>
+    padding(padding = 5, part = "all")
+
+ # In fixed layout, flextable uses explicit column widths.
+# The width argument is not a reliable way to force full-page width,
+# especially for PDF/Typst output.
+
+  ft <- flextable::set_table_properties(ft, layout = "autofit")
+
+  ft
+}
+```
+
+------------------------------------------------------------------------
+
+::: {.callout-note appearance="simple"}
+**Internal working document** — Dan Swart & Holly Richard · Schertz, Texas · Draft for review
+:::
+
+------------------------------------------------------------------------
+
+***This is NOT a 'you-can't-do-it' report.  It is a technical assessment of the challenges of building out a fully functioning analytical AI engine as I see it right now.  Every new product has challenges.  If technical challenges cannot be overcome at reasonable cost, consider having AI take it as far as possible, then prepare downloadable files that a human can subject to textual and numerical analysis, independent from the AI engine.***
+
+***See in particular the comparison Tables below***
+
+\
+\
+
+
+## The Problem
+
+### Current civic AI is optimized for Search and Retrieval, Not Analytical Study
+
+\
+
+AI-assisted municipal website tools have proliferated rapidly. Most are competent at retrieval: finding a permit form, summarizing a meeting agenda, locating a budget line. This is useful. It is not analysis.
+
+The distinction matters because the most consequential failures in local government are not failures of information access. They are failures of analytical scrutiny — projections that were never stress-tested, peer comparisons that were never questioned, trade-offs that were never named.
+
+> *"An AI system that does analytical work reads every staff report the way a skeptical board member or analytic researcher would. That product has never been built for civic use."*
+
+The reason is structural: current civic AI vendors sell to city staff and administrators. The buyer's interest is frictionless service delivery, higher efficiency, and cost reduction. There are no readily identifiable market incentives to purchase tools that make it easier to question the people paying for the tool.
+
+::: {.callout-tip appearance="minimal"}
+**The opportunity:** A pipeline built outside municipal infrastructure, serving oversight bodies, journalists, researchers, and engaged citizens, faces none of those incentive constraints. The builder controls what questions can be asked.
+:::
+
+------------------------------------------------------------------------
+
+## Conceptual Foundation
+
+### The five levels from data to decision analysis
+
+Every step up this hierarchy involves more choices, more assumptions, and more technical challenges. Understanding where a number sits on this ladder is prerequisite to evaluating it honestly.
+
+```{r}
+#| label: tbl-hierarchy
+#| ft.align: "left"
+
+hierarchy_df <- base::data.frame(
+  Level = c("0", "1", "2", "3", "4"),
+  Name = c(
+    "Raw data",
+    "Derived information",
+    "Contextual analysis",
+    "Interpretive analysis",
+    "Decision analysis"
+  ),
+  Description = c(
+    "What was recorded at the source — no calculation applied.",
+    "Calculation applied to data. Already analytical: period selection and category definitions are embedded choices.",
+    "Comparison to a standard, benchmark, or reference class.",
+    "Causal claim — a position that must be defended, not merely reported.",
+    "Implication for action — what the finding means for a governing body that must choose."
+  ),
+  Example = c(
+    '"FY2020 general fund expenditures: $42.1M" · "FY2026: $61.9M"',
+    '"47% growth over the period"',
+    '"47% vs. 28% CPI over the same period"',
+    '"Spending outpaced inflation, driven primarily by compensation, not service expansion"',
+    '"The structural gap implies X fiscal risk absent a correction in the next two budget cycles"'
+  ),
+  stringsAsFactors = FALSE
+)
+
+ft_hierarchy <- flextable::flextable(hierarchy_df) |>
+  flextable::set_header_labels(
+    Level       = "Level",
+    Name        = "Name",
+    Description = "Description",
+    Example     = "Illustrative example"
+  ) |>
+  flextable::italic(j = "Example", part = "body") |>
+  flextable::color(j = "Example", color = "#444444", part = "body") |>
+  # highlight decision analysis row (row 5)
+  flextable::bg(i = 5, bg = "#FFF2CC", part = "body") |>
+  flextable::bold(i = 5, part = "body") |>
+  ds_style_flextable(
+    title_text    = "The five levels from data to decision analysis",
+    subtitle_text = "Each level upward embeds additional choices, assumptions, and analytical commitments."
+  ) |>
+  # Column widths sum to 6.5in = letter page (8.5in) minus 1in margins each side.
+  flextable::width(j = "Level",       width = 0.5) |>
+  flextable::width(j = "Name",        width = 1.5) |>
+  flextable::width(j = "Description", width = 2.25) |>
+  flextable::width(j = "Example",     width = 2.25)
+
+ft_hierarchy
+```
+
+::: {.callout-warning appearance="minimal"}
+**The diagnostic question:** At which level is a staff report or budget presentation actually operating? Most appear to reach Level 4 while stopping at Level 1 — raw figures dressed in conclusions, with no visible chain of reasoning connecting them.
+:::
+
+------------------------------------------------------------------------
+
+## What Analytical AI Might Do
+
+### Seven capabilities absent from current products
+
+#### 1. Structured argument extraction
+
+The analytical AI must be able to identify from staff reports and presentations: the explicit claim being made, the evidence offered for it, and the recommendation following from it — as separable, inspectable objects. Not just summarize the document, but map its logical structure.
+
+#### 2. Identifying underlying assumptions
+
+Most budget and policy documents embed assumptions that are never stated. A fully capable system would flag: *"This projection assumes 3% annual revenue growth — what is that based on?"* It requires the AI to recognize what is missing, not just what is present.
+
+#### 3. Identifying Trade-offs
+
+Decisions allocate scarce resources. A genuine analytical tool would ask: *"What was not funded so this could be funded?"* Current tools do not connect decisions across documents or fiscal periods. Numeric summaries are siloed, usually by fiscal year.
+
+#### 4. Precedent and consistency checking
+
+Does this decision contradict a prior stated policy? Is this exception to a rule, or a new rule? This requires memory across the document corpus — not just retrieval but comparison.
+
+#### 5. Evaluating evidence quality
+
+This is the hardest. The system needs to distinguish empirical data with known methodology from vendor-supplied comparisons (self-serving), anecdote presented as evidence, assertion with no support, and cherry-picked peer groups. The usual framing of evidence appears rigorous when the comparator selection drives the conclusion.
+
+#### 6. Rhetorical pattern recognition
+
+Persuasive rhetoric in government documents has recognizable patterns: urgency framing, false dichotomies, appeal to peer cities, and "industry standard" claims. A capable system would flag these not as wrong, but as requiring scrutiny.
+
+#### 7. Longitudinal tracking
+
+Was the prediction made last year accurate? Did the promised outcome materialize? Is the result statistically different when compared with at least 10 prior periods? This closes the accountability loop — comparing what was claimed at decision time to what actually happened.
+
+------------------------------------------------------------------------
+
+## Pipeline Comparison
+
+### What exists vs. what is needed
+
+The table below maps each stage of the document processing pipeline, contrasting the current toy product (simulated vector store, basic chunking, no numeric reasoning) with the proposed analytical system.
+
+```{r}
+```{r}
+#| label: tbl-pipeline
+#| ft.align: "left"
+
+pipeline_df <- base::data.frame(
+  Stage = c(
+    "Ingestion",
+    "Chunking",
+    "Embedding & storage",
+    "Retrieval",
+    "Numeric reasoning",
+    "Argument extraction",
+    "Assumption detection",
+    "Evidence quality scoring",
+    "Longitudinal tracking",
+    "Output format"
+  ),
+  Current = c(
+    "PDF and HTML scraped from city website. No structure preserved. Text dumped as flat strings.",
+    "Fixed-size token windows. Sentence or paragraph boundaries approximated. Numeric tables broken arbitrarily across chunks.",
+    "Text embedded with general-purpose model. Single flat vector store. Cosine similarity retrieval only.",
+    "Single-step semantic search. Returns top-k chunks. No awareness of fiscal year, document type, or numeric context.",
+    "ABSENT. No calculation capability. Numbers are strings inside retrieved text. Model may hallucinate calculations it cannot verify.",
+    "ABSENT. Summarization only. Claims, evidence, and recommendations are not separated or labeled.",
+    "ABSENT. No mechanism to identify what is missing from a document's argument structure.",
+    "ABSENT. No classification of evidence type or quality. Assertion and data treated identically.",
+    "ABSENT. No memory across fiscal years. Each query is stateless relative to the document history.",
+    "Conversational answer. Citations to source documents. Limited numeric provenance."
+  ),
+  Proposed = c(
+    "Documents classified by type: budget, staff report, ordinance, resolution, and RFP. Fiscal tables extracted as typed data frames, not text. Metadata preserved: date, author, agenda item, and vote outcome.",
+    "Semantic chunking respects document logic. Claim, evidence, and recommendation units stay together. Tables are chunked as complete objects. Fiscal year is identified and tagged on every numeric chunk.",
+    "Dual-store architecture: managed vector store such as Pinecone, Weaviate, or Qdrant for semantic retrieval, plus structured relational store such as PostgreSQL or Snowflake for numeric queries. Fiscal numbers become queryable as numbers, not strings inside retrieved text.",
+    "Query routing: fiscal and numeric queries go to structured storage and execute as SQL. Document and argument queries go to vector retrieval. Compound queries fan out to both and merge. Hybrid vector plus keyword search. Retrieval is time-aware and can pull longitudinal series across fiscal years.",
+    "Code execution layer: the LLM generates and runs SQL or Python against the structured store to verify calculations. CAGR, CPI adjustment, and trend detection are executed, not estimated. Hallucinated numbers become detectable.",
+    "Structured decomposition: claim -> stated evidence -> stated reasoning -> recommendation -> vote outcome. Each element is stored as a distinct object, linkable across documents and fiscal years.",
+    "LLM prompted to identify what a projection requires to be true that is not stated. Flags growth-rate assumptions, peer-group selection rationale, and methodology disclosures. Coverage improves with corpus size; completeness cannot be guaranteed.",
+    "Evidence typed as empirical data with methodology, vendor-supplied comparison, peer-city assertion, anecdote, or unsourced assertion. Peer groups examined for selection bias. Vendor-supplied studies flagged automatically.",
+    "Prior-year predictions compared to outcomes. Claims made at budget adoption tracked against actuals in subsequent audits. SPC logic applied to long series to distinguish noise from signal.",
+    "Structured analytical memo: claim -> evidence chain -> assumptions identified -> trade-offs named -> confidence level. Every number linked to source document and calculation. Designed for council presentation or public comment."
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Clean "ABSENT." prefix for display.
+# Use plain text instead of Unicode warning symbols for better Typst/PDF reliability.
+pipeline_df$Current <- base::gsub(
+  pattern = "^ABSENT\\. ",
+  replacement = "Absent: ",
+  x = pipeline_df$Current
+)
+
+# Create a reusable table function.
+make_pipeline_table <- function(df, title_text, subtitle_text = NULL) {
+
+  absent_rows <- which(base::startsWith(df$Current, "Absent:"))
+
+  ft <- flextable::flextable(df) |>
+    flextable::set_header_labels(
+      Stage    = "Pipeline stage",
+      Current  = "Current toy product",
+      Proposed = "Proposed analytical engine"
+    ) |>
+    flextable::color(
+      i = absent_rows,
+      j = "Current",
+      color = "#7a3a1a",
+      part = "body"
+    ) |>
+    flextable::bg(
+      i = absent_rows,
+      j = "Current",
+      bg = "#FFF0E8",
+      part = "body"
+    ) |>
+    flextable::bg(
+      j = "Proposed",
+      bg = "#EBF3FB",
+      part = "body"
+    ) |>
+    ds_style_flextable(
+      title_text    = title_text,
+      subtitle_text = subtitle_text
+    ) |>
+    flextable::align(align = "left", part = "all") |>
+    flextable::valign(valign = "top", part = "all") |>
+    flextable::fontsize(size = 10.5, part = "body") |>
+    flextable::fontsize(size = 11.5, part = "header") |>
+    flextable::padding(padding = 3, part = "all") |>
+    flextable::width(j = "Stage",    width = 0.85) |>
+    flextable::width(j = "Current",  width = 2.80) |>
+    flextable::width(j = "Proposed", width = 2.85)
+
+  ft
+}
+
+# Table 2A: first half of the pipeline
+pipeline_df_2a <- pipeline_df[1:4, ]
+
+ft_pipeline_2a <- make_pipeline_table(
+  df = pipeline_df_2a,
+  title_text = "Pipeline comparisons: retrieval infrastructure",
+  subtitle_text = "Current toy product compared with the proposed enterprise retrieval architecture."
+)
+
+ft_pipeline_2a
+```
+
+```{=typst}
+#pagebreak()
+```
+
+```{r}
+#| label: tbl-pipeline-analytical
+#| ft.align: "left"
+
+# Table 2B: analytical capabilities
+pipeline_df_2b <- pipeline_df[5:10, ]
+
+ft_pipeline_2b <- make_pipeline_table(
+  df = pipeline_df_2b,
+  title_text = "Pipeline comparisons: analytical capabilities",
+  subtitle_text = "Rows marked 'Absent' denote capabilities entirely absent from the current system."
+)
+
+ft_pipeline_2b
+
+```
+```
+
+------------------------------------------------------------------------
+
+## The Proposed Pipeline in Detail
+
+The pipeline has four phases. Phases A and B are largely buildable with existing tools and the toy product as scaffold. Phases C and D represent the genuinely hard engineering and research challenges.
+
+### Phase A — Collection and structure
+
+**Stage 1: Automated document harvest**
+
+Scheduled scraping of the city website: agendas, packets, budgets, adopted ordinances, RFPs, audit reports. Documents stored with provenance metadata (date, meeting, URL, document type) in a versioned cloud archive. Incremental — only new documents processed on subsequent runs. JavaScript-rendered pages require a headless browser layer.
+
+*Components:* `BeautifulSoup` / `Scrapy` · `Playwright` · AWS S3 / Azure Blob Storage · PostgreSQL
+
+**Stage 2: Document classification and typed extraction**
+
+Each document classified by type. Fiscal tables extracted as structured data frames — columns typed, fiscal year tagged, department identified. Narrative sections chunked semantically, not by fixed token window. Tables never split across chunks. `Unstructured.io` handles heterogeneous municipal document formats that resist naive PDF parsing.
+
+*Components:* `Unstructured.io` · `pdfplumber` / `PyMuPDF` · LLM classifier (GPT-4o / Claude) · `pandas` / `polars` · PostgreSQL
+
+------------------------------------------------------------------------
+
+### Phase B — Indexing and retrieval
+
+**Stage 3: Dual-store indexing**
+
+Narrative chunks embedded and stored in a managed vector database for semantic retrieval. Fiscal data stored in a relational table queryable by year, department, account code, and amount. The two stores are linked by document and chunk ID so results from both can be merged for compound queries. Hybrid search — combining dense vector similarity with sparse BM25 keyword matching — substantially outperforms either approach alone on domain-specific civic text.
+
+*Components:* OpenAI `text-embedding-3-large` / Cohere `embed-v3` · Pinecone / Weaviate / Qdrant · PostgreSQL + pgvector · `LangChain` / `LlamaIndex`
+
+**Stage 4: Query routing and retrieval**
+
+An LLM-based router classifies each incoming query: numeric/fiscal queries routed to the structured store and executed as SQL; document/argument queries routed to the vector store; compound queries fan out to both and results merged before generation. The router is explicit — no silent fallback to approximate string matching for numeric questions.
+
+*Components:* LangChain router / LlamaIndex query engine · SQLAlchemy + PostgreSQL · hybrid vector + BM25 · GPT-4o / Claude
+
+------------------------------------------------------------------------
+
+### Phase C — Analytical reasoning layer
+
+**Stage 5: Numeric verification via code execution**
+
+The LLM does not perform arithmetic in text generation. For all numeric claims, it generates SQL or Python code, executes it against the structured store in a sandboxed environment, and presents the verified result. CPI adjustment, CAGR, year-over-year delta, and trend detection are all calculated, not retrieved. Hallucinated numbers become detectable — they will not match executed results.
+
+*Components:* OpenAI Code Interpreter / E2B sandbox · BLS API · FRED API · Python (`pandas`, `polars`, `statsmodels`)
+
+**Stage 6: Argument structure extraction**
+
+Each staff report and budget narrative parsed into a structured object: the explicit recommendation, the stated evidence, the stated reasoning chain, and the vote outcome. Pydantic schemas enforce consistent object shapes. These objects are stored and linkable across years — enabling questions such as *"What was the stated justification for this position classification in FY2022, and what did the eventual outcome show?"*
+
+*Components:* LangChain / LlamaIndex structured output · Pydantic schemas · PostgreSQL / Snowflake
+
+**Stage 7: Assumption surfacing and evidence classification**
+
+LLM prompted with domain-specific templates to identify unstated assumptions in projections (growth rates, utilization rates, peer-group composition). Evidence typed by provenance: empirical with methodology, vendor-supplied, peer-city assertion, anecdote, or unsupported assertion. Vendor-sourced comparisons flagged automatically.
+
+This stage has inherent limitations — it cannot find what it was not prompted to look for — but coverage improves systematically as the prompt library grows.
+
+*Components:* LangChain chains · GPT-4o / Claude · Pydantic · rhetorical pattern library
+
+------------------------------------------------------------------------
+
+### Phase D — Longitudinal accountability
+
+**Stage 8: Prediction-to-outcome tracking**
+
+Claims made at decision time — revenue projections, cost estimates, staffing outcomes — tracked against actuals from subsequent audit reports and budget amendments. The system alerts when a prior prediction fell outside a reasonable band. This closes the accountability loop that current tools leave entirely open.
+
+*Components:* PostgreSQL prediction store · outcome matcher · Python SPC (`scipy` / `statsmodels`)
+
+**Stage 9: Statistical process control on time series**
+
+For any metric tracked across 10 or more fiscal periods, SPC control limits applied to distinguish noise from signal. A spending increase within common-cause variation is not a finding. A persistent shift above the upper control limit is. This prevents the most common analytical failure in civic presentations — treating every year-over-year change as meaningful.
+
+*Components:* `scipy` / `statsmodels` · `pycontrol` · Streamlit / Dash dashboard · Quarto / Jupyter
+
+**Stage 10: Structured analytical output**
+
+Responses formatted as analytical memos, not conversational answers: finding stated, evidence chain shown, assumptions Identified, trade-offs named, confidence level stated. Every number linked to source document and to the calculation that produced it. Output designed for council presentation, public comment, or newsletter publication.
+
+*Components:* Quarto / Jupyter · `great_tables` / `Jinja2` templates · Substack API · memo template
+
+------------------------------------------------------------------------
+
+## The Serious Challenges Beyond the Toy Product
+
+The gap between the current prototype and a market-ready analytical system is real and should not be understated. The following challenges are not primarily technical — most can be solved with known engineering. They are challenges of validity, coverage, and institutional adoption.
+
+### 1. Fiscal table extraction at scale
+
+Municipal budget documents are not consistently formatted. Column headers shift, subtotals appear in unpredictable positions, and the same line item may be labeled differently across fiscal years. Reliable structured extraction requires either heavy normalization work per municipality or a general-purpose table parser that does not yet exist at the required precision.
+
+### 2. Assumption detection is incomplete by definition
+
+A model can only identify assumptions it has been prompted to look for. Unknown unknowns — the assumption nobody thought to ask about — remain invisible. This is not a solvable engineering problem; it is a fundamental epistemic limitation that must be disclosed to users explicitly.
+
+### 3. Evidence classification requires domain expertise to validate
+
+Labeling evidence as "vendor-supplied" or "peer group cherry-picked" requires the system to make judgments that a domain expert could dispute. False positives — flagging legitimate evidence as suspect — undermine trust. The classifier must be calibrated against real examples and reviewed regularly.
+
+### 4. Longitudinal matching across inconsistent records
+
+Matching a FY2022 budget line to a FY2025 audit entry requires resolving entity names, account codes, and departmental reorganizations that changed between years. Without a maintained crosswalk, prediction-to-outcome tracking will produce false mismatches and missed matches at unacceptable rates.
+
+### 5. Institutional resistance to independent scrutiny
+
+A tool that Identifies unstated assumptions and flags rhetoric will be characterized by some administrators as adversarial. Adoption by oversight bodies, journalism organizations, and civic groups — the natural customers — requires a trust-building strategy, not just a technical product.
+
+### 6. Generalization across municipalities
+
+A pipeline calibrated on Schertz data will require significant re-normalization for any other city. Chart of accounts, budget presentation formats, meeting record structures, and website organization all vary. True scale requires either a standardized municipal data layer that does not yet exist, or a municipality-by-municipality setup process with ongoing maintenance.
+
+::: {.callout-tip appearance="minimal"}
+**The fundable proposition:** These challenges are known, bounded, and addressable with a focused investment in domain-specific engineering, a maintained corpus, and expert human review. The toy product demonstrates that the pipeline architecture is sound. What is needed is the funding to move from proof-of-concept to validated, maintained, and generalized system.
+:::
+
+------------------------------------------------------------------------
+
+## Market Positioning
+
+### Why this product does not compete with existing civic AI
+
+Existing civic AI products — Zencity, Granicus, CivicPlus and similar — are infrastructure sold to municipalities. The buyer is city staff. The product's value proposition is efficiency and constituent engagement. Decision scrutiny is not a feature; it may be perceived as a threat to the buyer relationship.
+
+The analytical AI described here can also serve different buyers entirely: oversight bodies (school boards, city councils, county commissioners), investigative journalism organizations, civic watchdog groups, and individual researchers. The buyer's interest is precisely what current vendors cannot provide — independent analytical capacity that does not depend on the institution being scrutinized.
+
+::: {.callout-note appearance="minimal"}
+**The market gap is structural, not accidental.** No vendor currently serving municipalities can build this product for the same customer. A new entrant serving the accountability side of the market faces no direct competition — only the challenge of building institutional trust with buyers who have historically lacked analytical tools of any kind.
+:::
+
+------------------------------------------------------------------------
+
+## Summary for Funders
+
+The prototype demonstrates that the retrieval and storage architecture is sound. The dual-store design, semantic chunking, and query routing are buildable with existing open-source and managed-platform tools.
+
+The investment case rests on three hard problems that require funded development:
+
+1. **Reliable fiscal table extraction at scale** — the structured numeric foundation on which all analysis depends
+2. **Validated assumption and evidence classification** — the reasoning layer that distinguishes this product from every retrieval tool that preceded it
+3. **Longitudinal prediction-to-outcome tracking** across inconsistent municipal records — the accountability closure that no current civic AI provides
+
+The market opportunity is the accountability side of civic AI — a side that current vendors cannot serve without threatening their primary customer relationship. The product serves the public interest and has no known  competitor.
+
+------------------------------------------------------------------------
+
+*Dan Swart & Holly Richard · Schertz, Texas · Governing decisions deserve analytical analysis.*

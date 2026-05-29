@@ -1,5 +1,5 @@
 ---
-title: "Askable — The Internal-Relief Pitch"
+title: "'Askable' — The Internal-Relief Pitch"
 subtitle: "Civic Data Access · Model B (the jurisdiction keeps custody)"
 author: "Working strategy document"
 date: today
