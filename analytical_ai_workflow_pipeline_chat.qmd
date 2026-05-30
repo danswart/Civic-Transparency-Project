@@ -1,6 +1,6 @@
 ---
 title: "Workflow Pipeline for an Analytical Civic AI Product"
-subtitle: "From Toy RAG Demonstration to Marketplace-Ready Municipal Analysis Tool"
+subtitle: "A Pipeline Proposal for Civic AI That Evaluates Budget Decision Quality, Identifies Hidden Budget Assumptions, and Distinguishes Budget Evidence from Rhetoric"
 authors: 
   - name: "Dan Swart, CPA (ret)"
 date: today
@@ -22,6 +22,7 @@ format:
     code-block-bg: "#FAEBD7"
     code-block-border-left: "#31BAE9"
     embed-resources: true     # Set to 'false' for drafts. Override if you're NOT sharing output
+    self-contained: true
     include-in-header:
       - text: 
           <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -96,7 +97,7 @@ quarto:
 
 # for .qmd filesd
 execute:
-  echo: true
+  echo: false
   message: false
   warning: false
   eval: true
@@ -107,7 +108,7 @@ execute:
 # for .rmd files
 knitr:
   opts_chunk:
-    echo: true
+    echo: false
     error: false
     warning: false
     message: false

@@ -1,6 +1,6 @@
 ---
 title: "From Retrieval Assistant to Analytical Engine"
-subtitle: "A Pipeline Proposal for Civic AI That Evaluates Decision Quality, Identifies Hidden Assumptions, and Distinguishes Evidence from Rhetoric"
+subtitle: "A Pipeline Proposal for Civic AI That Evaluates Budget Decision Quality, Identifies Hidden Budget Assumptions, and Distinguishes Budget Evidence from Rhetoric"
 authors: 
   - name: "Dan Swart, CPA (ret)"
 date: today
@@ -48,7 +48,7 @@ format:
     citeproc: true
     link-citations: true
     linestretch: 1.0
-    self-contained: false
+    self-contained: true
     
     
     
@@ -527,7 +527,7 @@ Was the prediction made last year accurate? Did the promised outcome materialize
 
 The table below maps each stage of the document processing pipeline, contrasting the current toy product (simulated vector store, basic chunking, no numeric reasoning) with the proposed analytical system.
 
-```{r}
+
 ```{r}
 #| label: tbl-pipeline
 #| ft.align: "left"
@@ -797,11 +797,13 @@ The prototype demonstrates that the retrieval and storage architecture is sound.
 The investment case rests on three hard problems that require funded development:
 
 1. **Reliable fiscal table extraction at scale** — the structured numeric foundation on which all analysis depends
+
 2. **Validated assumption and evidence classification** — the reasoning layer that distinguishes this product from every retrieval tool that preceded it
+
 3. **Longitudinal prediction-to-outcome tracking** across inconsistent municipal records — the accountability closure that no current civic AI provides
 
 The market opportunity is the accountability side of civic AI — a side that current vendors cannot serve without threatening their primary customer relationship. The product serves the public interest and has no known  competitor.
 
 ------------------------------------------------------------------------
 
-*Dan Swart & Holly Richard · Schertz, Texas · Governing decisions deserve analytical analysis.*
+*Dan Swart & Holly Richard · Schertz, Texas · Governing decisions informed by analytical analysis.*
