@@ -1,0 +1,47 @@
+---
+title: "Shared Shiny App"
+format: html
+---
+
+I created a downloadable project bundle with the Shiny app, Supabase/Postgres schema, setup guide, import script, and deployment helper.
+
+Download the full Shiny + Supabase project bundle
+
+What’s inside:
+
+app.R
+R/config.R
+R/auth.R
+R/db.R
+R/repository.R
+R/ui.R
+R/server.R
+sql/01_create_schema.sql
+sql/02_optional_create_limited_app_user.sql
+scripts/test_db_connection.R
+scripts/import_existing_rds.R
+scripts/deploy_shinyapps.R
+docs/SETUP_GUIDE.qmd
+.Renviron.template
+.gitignore
+packages.R
+RStudio project file
+
+I rewrote the app as a small modular “namespace-style” project instead of one long script. Your current private app saves to funders.rds, uses a vertical entry form, an editable grid, statuses, deadlines, notes, and CSV export. The revised version keeps the same basic purpose but moves the durable data into Supabase/Postgres.
+
+One caution: I could not execute the app in this environment because R is not installed here, so the code is prepared and reviewed but not runtime-tested in RStudio.
+
+A few important setup notes:
+
+Run sql/01_create_schema.sql in the Supabase SQL Editor first.
+Copy .Renviron.template to .Renviron and fill in your Supabase connection details.
+Restart R.
+Run source("packages.R").
+Run source("scripts/test_db_connection.R").
+Run shiny::runApp().
+
+For deployment, the bundle includes scripts/deploy_shinyapps.R, but note the caution in the setup guide: shinyapps.io should not be where shared changing data lives. Posit’s Shiny guidance says shared/persistent data should be stored externally rather than passed between sessions through local files. Supabase is the database; shinyapps.io is just the interface.
+
+For Supabase connections from a hosted environment, the setup guide points you toward the session pooler, because Supabase’s direct connection may require IPv6 unless the project has IPv4 support; Supabase documents pooler/session-mode connection options for these cases.
+
+One more practical caution: shinyapps.io secret handling is not as good as a platform with encrypted app-level secrets. A current Posit community response says shinyapps.io does not support environment-variable management in the same way as newer hosted options. For just you and your partner tracking funding leads, this may be acceptable, but do not put highly sensitive material in the app.
