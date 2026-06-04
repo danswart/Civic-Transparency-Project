@@ -1,0 +1,34 @@
+---
+title: "Value Proposition"
+format: html
+---
+
+### 1. What is the fundamental marketplace problem we are offering to solve?
+
+City council members everywhere lack a fast, direct way to examine current and historical municipal data, making it difficult to evaluate the long-term risks, tradeoffs, and consequences of major budget choices.
+
+
+
+### 2. Why does that problem exist?
+
+Council members are usually presented with current-year proposals, reports, and staff summaries. Without an independent portal for exploring past decisions, financial trends, and operational patterns, they must rely on fragmented records and limited meeting-cycle timelines.
+
+
+
+### 3. Why hasn’t the problem already been solved?
+
+Municipal information systems were built primarily for staff workflows, compliance, and recordkeeping — not for elected officials who need to ask strategic questions quickly. Standard search tools, public websites, and general AI products are not designed to connect council questions to verified historical data, financial context, and source citations.
+
+
+
+### 4. Why does the marketplace need us vs anyone else?
+
+We are built around the council’s distinct role as independent decision-makers. While other software helps staff manage daily operations or reduce website friction, our product gives council members a neutral space to test ideas, check facts, compare options, and understand tradeoffs before a vote.
+
+
+
+### 5. Why should they come to us and only us?
+
+We provide a city-council-facing augmented AI platform designed specifically for collaborative, well-informed local government.
+
+Better government begins with better questions. We help councils govern with clarity and context. Our application does not take sides; it opens a secure, searchable window into the city’s own records, showing the facts, figures, trends, and exact source citations behind each budget question. We give elected officials the independent insight they need to collaborate effectively with staff and make better choices for their communities.

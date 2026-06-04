@@ -677,7 +677,7 @@ That is not ordinary RAG. It makes longitudinal data available for study of civi
 
 ## PDF-to-data reliability
 
-The biggest technical challenge is converting PDFs into accurate structured data.
+One of the biggest technical challenge is converting PDFs into accurate structured data.
 
 > Retrieval can tolerate imperfect extraction.  
 > Financial analysis cannot.
@@ -1221,7 +1221,7 @@ Role of R going forward
 
 \
 
-R should not be abandoned, but its role must change.
+R should not be abandoned, but its role will change.
 
 R remains valuable for:
 
